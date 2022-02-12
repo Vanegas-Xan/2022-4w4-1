@@ -1,0 +1,55 @@
+
+
+    .site__header{
+        display: flex;
+        flex-direction: row;
+        @media screen and(min-width: $largeur__media-tablette) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+    &__titre{
+        h1{ 
+            margin:0;
+            font-family: $font_header-h1;
+            font-size : clamp(.8rem, 2vw, 8rem);
+
+        }
+        h2{ 
+            margin:0;
+            font-family: $font_header-h2;
+            font-size : clamp(.6rem, 4vw, 2rem);
+        }
+    }
+    &__utile{
+        display: flex;
+        flex-direction: row;
+      }
+   .icone{ 
+       display: flex;
+       flex-direction: row;
+           &__lien{}
+/**----------------------------------------------------------------------RECHERCHE*/
+        } 
+    .recherche{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        &__input{}
+        &__button{
+            position: absolute;
+            width: 24px;
+            height: 19px;
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+  
+        
+       
+}  
