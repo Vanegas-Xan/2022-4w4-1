@@ -15,6 +15,8 @@
 .carte {
     display: flex;
     flex-direction: column;
+    color: $color__background-main;
+    box-shadow: rgb(57, 64, 68) 1px -1px 10px;
     border: 1px solid 1px;
     width: 30%;
 
@@ -22,18 +24,34 @@
       width: 45% ;
     }
     @media screen and (min-width: $largeur__media-desktop){
-        width: 28% ;
+        width: 30% ;
       }
     padding: 10px;
     background-color: GhostWhite;
     border-radius: 25px;
+    transition: 300ms;
+}
+
+
+.carte:hover{
+    background-color:rgb(165, 224, 153) ;
+    &__titre{
+        background-color:rgb(250, 255, 249) ;
+    }
+    &__contenu{
+        background-color:rgb(209, 164, 137) ;
+    }
 }
 .carte__titre {
     font-size: 1.5rem;
     color: DimGrey;
+    transition: 300ms;
 }
+
 .carte__contenu {
     font-size: 0.8rem;
     color: DimGrey;
+    font-family: $font_header-h1;
+    transition: 300ms;
 }
  

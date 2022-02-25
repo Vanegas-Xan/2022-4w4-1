@@ -341,7 +341,7 @@ VARIABLES
     background-color: #c57d7d;
     display: grid;
     gap: 10px;
-    grid-template-columns: 2350px auto;
+    grid-template-columns: 1350px auto;
     grid-template-areas: " header header" "barre main" " footer footer";
   }
 }
@@ -350,7 +350,7 @@ VARIABLES
   background-color: #c57d7d;
   display: grid;
   gap: 10px;
-  grid-template-columns: 2350px auto;
+  grid-template-columns: 1350px auto;
   grid-template-areas: " header" "barre" " main" " footer";
 }
 
@@ -433,7 +433,6 @@ COMPOSANTS
 
 .menu-principal-container {
   display: none;
-  padding-top: 30px 0 0;
 }
 
 .menu {
@@ -455,7 +454,6 @@ COMPOSANTS
 
 .menu-item a:hover {
   color: #191970;
-  text-decoration: none;
 }
 
 @media screen and (min-width: 550px) {
@@ -464,14 +462,6 @@ COMPOSANTS
   }
   .menu-principal-container {
     display: block;
-    padding-top: 30px 0 0;
-  }
-}
-
-@media screen and (min-width: 550px) {
-  .menu-principal-container {
-    display: block;
-    padding-top: 30px 0 0;
   }
 }
 
@@ -502,12 +492,12 @@ COMPOSANTS
 
 .site__header__utile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .site__header .icone {
   display: flex;
-  flex-direction: row;
+  flex-wrap: nowrap;
   /**----------------------------------------------------------------------RECHERCHE*/
 }
 
@@ -528,12 +518,29 @@ COMPOSANTS
   margin: 0;
 }
 
+.site__header:nth-of-type(1) {
+  animation: anime-entete 1s 0s fowards;
+}
+
+.site__header:nth-of-type(2) {
+  animation: anime-entete 1s .25s fowards;
+}
+
+.site__header:nth-of-type(3) {
+  animation: anime-entete 1s 5s fowards;
+}
+
+.site__header:nth-of-type(4) {
+  animation: anime-entete 1s .75s fowards;
+}
+
 .site__main {
   display: flex;
   flex-wrap: wrap;
   background-color: cadetblue;
   justify-content: space-evenly;
   row-gap: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .main__titre {
@@ -545,11 +552,14 @@ COMPOSANTS
 .carte {
   display: flex;
   flex-direction: column;
+  color: #a82f2f;
+  box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   width: 30%;
   padding: 10px;
   background-color: GhostWhite;
   border-radius: 25px;
+  transition: 300ms;
 }
 
 @media screen and (min-width: 550px) {
@@ -560,38 +570,67 @@ COMPOSANTS
 
 @media screen and (min-width: 1000px) {
   .carte {
-    width: 28%;
+    width: 30%;
   }
+}
+
+.carte:hover {
+  background-color: #a5e099;
+}
+
+.carte:hover__titre {
+  background-color: #fafff9;
+}
+
+.carte:hover__contenu {
+  background-color: #d1a489;
 }
 
 .carte__titre {
   font-size: 1.5rem;
   color: DimGrey;
+  transition: 300ms;
 }
 
 .carte__contenu {
   font-size: 0.8rem;
   color: DimGrey;
+  font-family: "Poppins", sans-serif;
+  transition: 300ms;
 }
 
 .site__footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-family: 'Poppins', sans-serif;
 }
 
 .site__info {
   color: whitesmoke;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .site__info2 {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  font-family: "Poppins", sans-serif;
 }
 
 .site__info2__droit {
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 12em;
+  padding-right: 30em;
+}
+
+.site__info__adresse {
+  font-family: 'Poppins', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

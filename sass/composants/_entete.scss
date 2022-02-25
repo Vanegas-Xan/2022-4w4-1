@@ -25,12 +25,13 @@
     }
     &__utile{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
       }
    .icone{ 
        display: flex;
-       flex-direction: row;
-           &__lien{}
+       
+       flex-wrap: nowrap;
+          // &__lien{}
 /**----------------------------------------------------------------------RECHERCHE*/
         } 
     .recherche{
@@ -38,7 +39,7 @@
         display: flex;
         align-items: center;
         justify-self: center;
-        &__input{}
+        //&__input{}
         &__button{
             position: absolute;
             width: 24px;
@@ -49,7 +50,21 @@
             margin: 0;
         }
     }
-  
+
+
+  &:nth-of-type(1){
+        animation:  anime-entete 1s 0s fowards;
+  }
+  &:nth-of-type(2){
+    animation:  anime-entete 1s .25s fowards;
+}
+&:nth-of-type(3){
+    animation:  anime-entete 1s 5s fowards;
+}
+&:nth-of-type(4){
+    animation:  anime-entete 1s .75s fowards;
+}
+
         
        
 }  

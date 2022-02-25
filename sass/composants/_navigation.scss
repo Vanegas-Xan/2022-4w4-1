@@ -18,7 +18,7 @@
 
 .menu-principal-container{
     display:none;
-padding-top: 30px 0 0 ;
+
 }
 
 .menu{
@@ -35,10 +35,10 @@ padding-top: 30px 0 0 ;
         font-family: $font_navigation;
         padding: 5px;
         text-decoration: none;
-
+        //background-color: $color__background-link;
         &:hover{
             color: $color__link-hover;
-            text-decoration: none;
+            
         }
     }
 }
@@ -49,18 +49,8 @@ padding-top: 30px 0 0 ;
      }
     .menu-principal-container{
         display: block;
-    padding-top: 30px 0 0 ;
+   
     }
     
 }
-@media screen and (min-width: $largeur__media-mobile) {
-   
-    #burger{
-        
-    }
-   .menu-principal-container{
-       display: block;
-   padding-top: 30px 0 0 ;
-   }
-   
-}
+
