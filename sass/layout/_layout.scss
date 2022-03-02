@@ -7,7 +7,7 @@
 	grid-template-columns: ($size__site-sidebar) auto;
 	grid-template-areas:
 		" header header"
-		"barre main"
+		"sidebar main"
 		" footer footer";
 }
 
@@ -19,9 +19,9 @@
     gap: 10px;
 	grid-template-columns: ($size__site-sidebar) auto;
 	grid-template-areas:
-		" header"
-		"barre"
-        " main"
+        " header"
+        "sidebar"	
+		" main"
 		" footer";
 }
 .site__header{
@@ -32,16 +32,15 @@
     }
 
     &__utile{
-        //grid-area: header;
+        grid-area: header;
         background-color: $color__background-header;
     
     }
 }
 
 .site__barre{
-    display: flex;
-    flex-direction: column;
-    grid-area: barre;
+  
+    grid-area: sidebar;
     background-color: $color__background-barre;
 }
 

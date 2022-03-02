@@ -8,10 +8,11 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class("site"); ?> >
-<section class="site__header__titre">
-    <h1 class="header__principal"><?php echo get_bloginfo( 'name'); ?></h1>
-    <h2 class="header__secondaire"><?php echo get_bloginfo( 'description'); ?></h2>
-</section>
+<header class="site__header__titre">
+    <h1 class="header__principal"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a><?php bloginfo('name'); ?></h1>
+
+    <h2 class="header__secondaire"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a><?php bloginfo('description'); ?></h2>
+</header>
 <section class="site__header__utile">
 <div class="icone">
 <a class="icone__lien" href="#"><svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#90d5c7"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path></svg>

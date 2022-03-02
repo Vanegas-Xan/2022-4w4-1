@@ -180,9 +180,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -190,9 +190,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -201,9 +201,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -247,8 +247,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -256,8 +256,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -265,7 +265,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -273,7 +273,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,31 +342,28 @@ VARIABLES
     display: grid;
     gap: 10px;
     grid-template-columns: 1350px auto;
-    grid-template-areas: " header header" "barre main" " footer footer";
+    grid-template-areas: " header header" "sidebar main" " footer footer";
   }
 }
-
 .site {
   background-color: #c57d7d;
   display: grid;
   gap: 10px;
   grid-template-columns: 1350px auto;
-  grid-template-areas: " header" "barre" " main" " footer";
+  grid-template-areas: " header" "sidebar" " main" " footer";
 }
 
 .site__header__titre {
   grid-area: header;
   background-color: #555;
 }
-
 .site__header__utile {
+  grid-area: header;
   background-color: #555;
 }
 
 .site__barre {
-  display: flex;
-  flex-direction: column;
-  grid-area: barre;
+  grid-area: sidebar;
   background-color: #742525;
 }
 
@@ -382,7 +379,7 @@ VARIABLES
 
 /*.site {
    // background-color: azure;
-   
+
 }*/
 /* -----------------------------------------------------------------
 ELEMENTS
@@ -392,19 +389,15 @@ a {
   flex-direction: column;
   color: #4169e1;
 }
-
 a:visited {
   color: #800080;
 }
-
 a:hover, a:focus, a:active {
   color: #191970;
 }
-
 a:focus {
   outline: thin dotted;
 }
-
 a:hover, a:active {
   outline: 0;
 }
@@ -420,7 +413,7 @@ COMPOSANTS
   display: block;
   position: absolute;
   transform: rotate(0deg);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 #chk-burger:checked ~ #burger {
@@ -445,13 +438,11 @@ COMPOSANTS
   margin: 0;
   padding: 0;
 }
-
 .menu-item a {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  padding: 5px;
+  padding: 4px;
   text-decoration: none;
 }
-
 .menu-item a:hover {
   color: #191970;
 }
@@ -460,55 +451,48 @@ COMPOSANTS
   #burger {
     display: none;
   }
+
   .menu-principal-container {
     display: block;
   }
 }
-
-.site__header {
+.site__header__titre {
   display: flex;
   flex-direction: row;
 }
-
 @media screen and (min-width: 550px) {
-  .site__header {
+  .site__header__titre {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
-
-.site__header__titre h1 {
+.site__header__titre__titre h1 {
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
-
-.site__header__titre h2 {
+.site__header__titre__titre h2 {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: clamp(0.6rem, 4vw, 2rem);
 }
-
-.site__header__utile {
+.site__header__titre__utile {
   display: flex;
   flex-direction: column;
 }
-
-.site__header .icone {
+.site__header__titre .icone {
   display: flex;
   flex-wrap: nowrap;
   /**----------------------------------------------------------------------RECHERCHE*/
 }
-
-.site__header .recherche {
+.site__header__titre .recherche {
   position: relative;
   display: flex;
   align-items: center;
   justify-self: center;
 }
-
-.site__header .recherche__button {
+.site__header__titre .recherche__button {
   position: absolute;
   width: 24px;
   height: 19px;
@@ -516,22 +500,6 @@ COMPOSANTS
   outline: none;
   padding: 0;
   margin: 0;
-}
-
-.site__header:nth-of-type(1) {
-  animation: anime-entete 1s 0s fowards;
-}
-
-.site__header:nth-of-type(2) {
-  animation: anime-entete 1s .25s fowards;
-}
-
-.site__header:nth-of-type(3) {
-  animation: anime-entete 1s 5s fowards;
-}
-
-.site__header:nth-of-type(4) {
-  animation: anime-entete 1s .75s fowards;
 }
 
 .site__main {
@@ -561,13 +529,11 @@ COMPOSANTS
   border-radius: 25px;
   transition: 300ms;
 }
-
 @media screen and (min-width: 550px) {
   .carte {
     width: 45%;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .carte {
     width: 30%;
@@ -577,11 +543,9 @@ COMPOSANTS
 .carte:hover {
   background-color: #a5e099;
 }
-
 .carte:hover__titre {
   background-color: #fafff9;
 }
-
 .carte:hover__contenu {
   background-color: #d1a489;
 }
@@ -603,7 +567,8 @@ COMPOSANTS
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
 }
 
 .site__info {
@@ -631,6 +596,23 @@ COMPOSANTS
 }
 
 .site__info__adresse {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.recherche {
+  position: relative;
+}
+.recherche__input {
+  flex: 1;
+  width: 100%;
+}
+.recherche__bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}/*# sourceMappingURL=style.css.map */
