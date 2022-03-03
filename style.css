@@ -348,6 +348,7 @@ VARIABLES
 .site {
   background-color: #c57d7d;
   display: grid;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   gap: 10px;
   grid-template-columns: 1350px auto;
   grid-template-areas: " header" "sidebar" " main" " footer";
@@ -430,7 +431,7 @@ COMPOSANTS
   transform: rotate(90deg);
 }
 
-#chk-burger:checked ~ #menu_principal_container {
+#chk-burger:checked ~ .menu_principal_container {
   display: block;
 }
 
