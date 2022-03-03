@@ -36,6 +36,7 @@
         font-family: $font_navigation;
         padding: 4px;
         text-decoration: none;
+        color: $color__link;
         //background-color: $color__background-link;
         &:hover{
             color: $color__link-hover;

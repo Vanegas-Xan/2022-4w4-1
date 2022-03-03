@@ -1,3 +1,8 @@
+@mixin links(	$couleur, 
+				$couleur--visited, 
+				$couleur--hover)
+				{
+
 a {
     display: flex;
     flex-direction: column;
@@ -22,16 +27,18 @@ a {
 		outline: 0;
 	}
 
-	/*a {
+	a {
 		@include links(	$color__link,
 						$color__link-visited, 
 						$color__link-hover );
-	}*/
+	}
 	
-	 /*.site__footer a{
+	.site__footer a{
 		@include links(	$color__link__footer,
 						$color__link__footer-visited, 
 						$color__link__footer-hover );
-	}*/
+	}
 	
 }
+}
+
