@@ -378,10 +378,6 @@ VARIABLES
   background-color: #382222;
 }
 
-/*.site {
-   // background-color: azure;
-
-}*/
 /* -----------------------------------------------------------------
 ELEMENTS
 ------------------------------------------------------------------- */
@@ -553,7 +549,15 @@ COMPOSANTS
   flex-direction: row;
   justify-content: space-evenly;
   font-family: "Poppins", sans-serif;
-  padding: 15px;
+  background-color: #382222;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.site__droit {
+  color: #f0c6c6;
+  padding-top: 60px;
 }
 
 .site__info {
@@ -566,14 +570,7 @@ COMPOSANTS
 
 .site__info__adresse {
   font-family: "Poppins", sans-serif;
-  padding: 15px;
-}
-
-.site__footer__menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-decoration: none;
+  color: #f0c6c6;
 }
 
 .recherche {

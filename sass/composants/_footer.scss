@@ -1,12 +1,22 @@
+
+
 .site__footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     font-family: 'Poppins', sans-serif;
-    padding: 15px;
+   
+    background-color: $color__background-footer;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  
 }
 
-
+.site__droit{
+    color: rgb(240, 198, 198);
+    padding-top: 60px;
+}
 
 .site__info{
     color: whitesmoke;
@@ -21,12 +31,9 @@
 
 .site__info__adresse{
     font-family: 'Poppins', sans-serif;
-    padding: 15px;
+    color: rgb(240, 198, 198);
 }
-.site__footer__menu
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-decoration: none;
-}
+
+
+
+        
