@@ -403,7 +403,7 @@ COMPOSANTS
   transform: rotate(90deg);
 }
 
-#chk-burger:checked ~ .menu_principal_container {
+#chk-burger:checked ~ .menu-principal-container {
   display: block;
 }
 
@@ -412,7 +412,7 @@ COMPOSANTS
 }
 
 .menu {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -564,25 +564,16 @@ COMPOSANTS
   font-family: "Poppins", sans-serif;
 }
 
-.site__info2 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  font-family: "Poppins", sans-serif;
-}
-
-.site__info2__droit {
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 12em;
-  padding-right: 30em;
-}
-
 .site__info__adresse {
   font-family: "Poppins", sans-serif;
   padding: 15px;
+}
+
+.site__footer__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .recherche {
