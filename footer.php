@@ -38,6 +38,8 @@
              <p>Copyright 2022 - College de Maisonneuve.</p>
          </section>
      </div>
+
+     <?php get_search_form() ?>
      <?php wp_footer(); ?>
     
 
