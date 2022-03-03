@@ -1,3 +1,9 @@
+<?php
+/**
+ * L'entête « header » de chacune des pages de notre site
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +18,7 @@
     <h1 class="header__principal"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a><?php bloginfo('name'); ?></h1>
 
     <h2 class="header__secondaire"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a><?php bloginfo('description'); ?></h2>
-</header>
+
 <section class="site__header__utile">
 <div class="icone">
 <a class="icone__lien" href="#"><svg width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#90d5c7"><path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path><path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path><path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path></svg>
@@ -36,19 +42,16 @@
 <input type="text" class="recherche_input">
 <button class="recherche__bouton"></button>
 </section>
-
-<header class="site__header">
-    
 </header>
+
 <section class="site__barre">
     <input type="checkbox"  id="chk-burger">
     <label for="chk-burger" id="burger">
-  
     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#ccc">
     <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
     </label>
 <?php wp_nav_menu(array("menu"=>"principal",
-                                        "container"=>"nav")); ?>
+                       "container"=>"nav")); ?>
  
 </section>
     

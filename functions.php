@@ -28,7 +28,7 @@ foreach($mon_objet as $cle => $valeur){
 
 //$valeur->title = substr($valeur->titre, 0, 7);
 
-$valeur->title = wp_trim_words($valeur->titre, 4, "...");
+$valeur->title = wp_trim_words($valeur->title, 4, "...");
 }
 
 return $mon_objet;

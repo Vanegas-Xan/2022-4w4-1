@@ -388,6 +388,16 @@ a {
   display: flex;
   flex-direction: column;
   color: #4169e1;
+  /*a {
+  	@include links(	$color__link,
+  					$color__link-visited, 
+  					$color__link-hover );
+  }*/
+  /*.site__footer a{
+  	@include links(	$color__link__footer,
+  					$color__link__footer-visited, 
+  					$color__link__footer-hover );
+  }*/
 }
 a:visited {
   color: #800080;
@@ -439,6 +449,7 @@ COMPOSANTS
   padding: 0;
 }
 .menu-item a {
+  display: block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   padding: 4px;
   text-decoration: none;
@@ -523,7 +534,7 @@ COMPOSANTS
   color: #a82f2f;
   box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
-  width: 30%;
+  width: 100%;
   padding: 10px;
   background-color: GhostWhite;
   border-radius: 25px;
