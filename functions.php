@@ -20,7 +20,6 @@ function cidw_4w4_enregistre_mon_menu() {
                        ) );
 }
 
-add_action( 'after_setup_theme', 'cidw_4w4_enregistre_mon_menu' );
 
 //-------------------------------------------------------------Filtre chacun des choixs du menu
 
@@ -48,9 +47,12 @@ function cidw_4w4_add_theme_support(){
     'height' => 100
   ));
 }
+add_action( 'after_setup_theme', 'cidw_4w4_enregistre_mon_menu' );
 
-add_action( 'widgets_init', 'my_register_sidebars' );
+
+
 function my_register_sidebars() {
+   /* Register the 'primary' sidebar. */
   register_sidebar(
     array(
         'id'            => 'entete_1',
@@ -110,5 +112,5 @@ function my_register_sidebars() {
     );
     /* Repeat register_sidebar() code for additional sidebars. */
 }
-
+add_action( 'widgets_init', 'my_register_sidebars' );
 ?>
