@@ -468,8 +468,9 @@ COMPOSANTS
 }
 .site__header__titre {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
   padding-left: 15px;
 }
 @media screen and (min-width: 550px) {
@@ -529,6 +530,12 @@ COMPOSANTS
   justify-content: space-evenly;
   row-gap: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+.principal {
+  background-color: #d16b6b;
+  border-radius: 5px;
+  box-shadow: #39443e 1px -1px 10px;
 }
 
 .main__titre {
@@ -659,18 +666,32 @@ COMPOSANTS
 
 */
 .recherche {
-  position: relative;
+  display: flex;
+  border: 1px solid #aaa;
+  height: 30px;
 }
-.recherche__input {
-  flex: 1;
+.recherche__text {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.5s;
   width: 100%;
 }
-.recherche__bouton {
+.recherche__text:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (min-width: 700px) {
+  .recherche__text {
+    width: 300px;
+  }
+}
+.recherche__submit {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-self: center;
-  position: absolute;
-  right: 0;
-  top: 0;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+.recherche__submit svg {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
