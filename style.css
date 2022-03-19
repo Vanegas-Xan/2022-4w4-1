@@ -410,7 +410,6 @@ COMPOSANTS
 }
 
 #burger {
-  display: block;
   position: absolute;
   transform: rotate(0deg);
   transition: transform 0.3s;
@@ -490,8 +489,9 @@ COMPOSANTS
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: clamp(0.6rem, 4vw, 2rem);
 }
-.site__header__titre .custom-logo-link, .site__header__titre .header__principal .header-description {
+.site__header__titre .custom-logo-link, .site__header__titre .header__principal, .site__header__titre .header-description {
   padding-left: 20px;
+  text-decoration: none;
 }
 .site__header__titre__utile {
   display: flex;
@@ -689,6 +689,12 @@ COMPOSANTS
   padding: 0 5px 0 5px;
   width: 30px;
   border: none;
+}
+
+.site__main_recherche {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .cours__titre {
