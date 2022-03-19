@@ -6,7 +6,7 @@ function cidw_4w4_enqueue() {
     filemtime(get_template_directory() . '/style.css'),
      false);
 
-     wp_enqueue_style('cidw_4w4_police_google','https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap', false);
+     wp_enqueue_style('cidw_4w4_police_google','https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap','https://fonts.googleapis.com/css2?family=Bayon&display=swap', false);
 } 
 
 add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");

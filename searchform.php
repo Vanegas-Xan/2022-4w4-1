@@ -1,31 +1,12 @@
-<?php
- /**
- * Le modèle search.php
- *
- * Permet d'afficher les résultats d'une recherche
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package cidw-4w4
- */
-?>
-<?php get_header() ?>;
-<main class="site__main">
-    <h1 class="site__main__titre">
-        Résultats de la recherche
-    </h1>
-    <?php if (have_posts()): ?>
-    <?php while (have_posts()) : the_post(); ?>
-    <article class="site__main__recherche">
-        <h3>
-            <a href="<?php echo get_permalink(); ?>">
-                <?php the_title(); ?>
-            </a>
-        </h3>
-        <p><?php echo wp_trim_words(get_the_content(),20) ?></p>
-        <hr>
-    </article>
-    <?php endwhile ?>
-    <?php endif ?>
-</main>
-<?php get_footer() ?>;
+<form action="<?php echo get_home_url('/') ?>" class="recherche" method="get">
+    <input type="text" name="s" class="recherche__text" 
+    value="<?php echo get_search_query(); ?>">
+    <button class="recherche__submit">
+        <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            color="#000">
+            <path fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </button>
+</form>

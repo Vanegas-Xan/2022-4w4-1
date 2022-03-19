@@ -507,21 +507,6 @@ COMPOSANTS
   flex-wrap: nowrap;
   /**----------------------------------------------------------------------RECHERCHE*/
 }
-.site__header__titre .recherche {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-self: center;
-}
-.site__header__titre .recherche__button {
-  position: absolute;
-  width: 24px;
-  height: 19px;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
 
 .site__main {
   display: flex;
@@ -694,4 +679,24 @@ COMPOSANTS
 }
 .recherche__submit svg {
   color: #000;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.recherche .wp-block-search__button {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  padding: 0 5px 0 5px;
+  width: 30px;
+  border: none;
+}
+
+.cours__titre {
+  color: #f00;
+}
+.cours section {
+  display: flex;
+}
+/* -----------------------------------------------------------------
+ANIMATIONS
+------------------------------------------------------------------- *//*# sourceMappingURL=style.css.map */
