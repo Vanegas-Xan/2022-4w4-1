@@ -26,9 +26,9 @@
 <section class="site__header__utile">
 
 
-</section><?php get_search_form() ?>
+</section>
 </header>
-
+<?php get_search_form() ?>
 <section class="site__barre">
     <input type="checkbox"  id="chk-burger">
     <label for="chk-burger" id="burger">

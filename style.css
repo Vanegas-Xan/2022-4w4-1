@@ -392,6 +392,7 @@ VARIABLES
 .site__main {
   grid-area: main;
   background-color: #d16b6b;
+  padding: 10px 15px 10px 15px;
 }
 
 .site__footer {
@@ -577,7 +578,7 @@ COMPOSANTS
 
 .site__footer {
   background-color: #263353;
-  padding: 150px;
+  padding: 15px;
 }
 .site__footer__colonne {
   display: flex;
@@ -695,6 +696,7 @@ COMPOSANTS
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: center;
 }
 
 .cours__titre {

@@ -8,16 +8,16 @@
 
 
  <div class="footer__colonne">
-        <section class="footer__adresse"><?php dynamic_sidebar( 'pied_page_colonne_1' ); ?>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, sint nemo! Delectus totam omnis aliquid voluptatem facilis itaque eum iure, accusamus iste vero nemo hic asperiores nobis. Vero, hic mollitia.</section>
-        <section class="footer__article"> <?php dynamic_sidebar( 'pied_page_colonne_2' ); ?>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestias ullam dignissimos. Molestias labore consequuntur rem nulla perspiciatis est, recusandae repellendus voluptatibus error dolorum? Eius laudantium nam debitis eaque cumque!</section>
-        <section class="footer__lien"><?php dynamic_sidebar( 'pied_page_colonne_3' ); ?> <?php               
+        <section class="footer__adresse"><?php get_sidebar( 'pied_page_colonne_1' ); ?>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, sint nemo! Delectus totam omnis aliquid voluptatem facilis itaque eum iure, accusamus iste vero nemo hic asperiores nobis. Vero, hic mollitia.</section>
+        <section class="footer__article"> <?php get_sidebar( 'pied_page_colonne_2' ); ?>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestias ullam dignissimos. Molestias labore consequuntur rem nulla perspiciatis est, recusandae repellendus voluptatibus error dolorum? Eius laudantium nam debitis eaque cumque!</section>
+        <section class="footer__lien"><?php get_sidebar( 'pied_page_colonne_3' ); ?> <?php               
           wp_nav_menu(array("menu"=> "lien_externe"));?></section>
  </div>
 
 
  <div class="site__footer__ligne">
 
-        <section class="footer__description"> <?php dynamic_sidebar( 'pied_page_ligne_1' ); ?>4w4-Conception et développmeent web</section>
+        <section class="footer__description"> <?php get_sidebar( 'pied_page_ligne_1' ); ?>4w4-Conception et développmeent web</section>
         <section class="footer__copyright">&copy;Collège de Maisonnneuve TOUS DROITS RÉSERVÉS</section>
         <section class="footer__menu">
         <?php 
