@@ -705,6 +705,12 @@ COMPOSANTS
 .cours section {
   display: flex;
 }
+.cours .cours__carte {
+  background-color: #a5e099;
+  margin: 0;
+  padding: 0;
+}
+
 /* -----------------------------------------------------------------
 ANIMATIONS
 ------------------------------------------------------------------- *//*# sourceMappingURL=style.css.map */

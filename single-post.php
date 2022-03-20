@@ -5,6 +5,7 @@
         <section class="cours">
             <?php  the_post(); ?>
             <article class="cours__carte">
+                <div class="single__cartes">
                 <?php
                     $titre = get_the_title();
                     $titreCourt = substr(get_the_title(), 8);
@@ -14,6 +15,7 @@
                     $posFinHeures = strrpos($titre, ')');
                     $nbHeures = substr($titre, $posDebutHeures, $posFinHeures - $posDebutHeures);
                 ?>
+                </div>
                 <h2 class="carte__titre"><?= $titreCourt; ?></h2>
                 <p class="carte__code"><?= substr(get_the_title(), 0, 7) ?></p>
                 <p><?= $nbHeures; ?></p>
