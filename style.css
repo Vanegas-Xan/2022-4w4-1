@@ -482,6 +482,7 @@ COMPOSANTS
 }
 .site__header__titre__titre h1 {
   margin: 0;
+  padding-right: 15px;
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
@@ -599,6 +600,11 @@ COMPOSANTS
   display: flex;
   flex-direction: row;
 }
+.site__footer__ligne .footer__recherche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .site__footer__ligne .footer__menu {
   align-items: flex-end;
 }
@@ -607,6 +613,7 @@ COMPOSANTS
   flex-direction: row;
   justify-content: space-evenly;
   font-family: "Poppins", sans-serif;
+  padding-top: 30px;
   color: #f0c6c6;
 }
 
