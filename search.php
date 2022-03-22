@@ -11,7 +11,7 @@
  */
 ?>
 <?php get_header() ?>;
-<main class="site__main_recherche">
+<main class="site__main">
     <h1 class="site__main__titre">
         Résultats de la recherche
     </h1>

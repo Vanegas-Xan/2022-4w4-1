@@ -355,7 +355,6 @@ VARIABLES
 }
 .site {
   background-color: #285664;
-  display: grid;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   gap: 10px;
   height: 100vh;
@@ -472,6 +471,7 @@ COMPOSANTS
   justify-content: center;
   flex-direction: column;
   padding-left: 15px;
+  padding-top: 100px;
 }
 @media screen and (min-width: 550px) {
   .site__header__titre {
@@ -577,6 +577,14 @@ COMPOSANTS
   transition: 300ms;
 }
 
+@font-face {
+  font-family: "Bayon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bayon/v27/9XUrlJNmn0LPFm-lMBc0dw.woff2) format("woff2");
+  unicode-range: U+1780-17FF, U+200C, U+25CC;
+}
 .site__footer {
   background-color: #263353;
   padding: 15px;
@@ -601,11 +609,11 @@ COMPOSANTS
   flex-direction: row;
 }
 .site__footer__ligne .footer__copyright {
-  font-family: "Bayon";
+  font-family: "Bayon, sans-serif";
   color: #d16b6b;
 }
 .site__footer__ligne .footer__auteur {
-  font-family: "Bayon";
+  font-family: "Bayon, sans-serif";
   color: #d16b6b;
 }
 .site__footer__ligne .footer__recherche {
@@ -620,9 +628,9 @@ COMPOSANTS
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-family: "Poppins", sans-serif;
   padding-top: 30px;
   color: #f0c6c6;
+  font-family: "Bayon";
 }
 
 /*
@@ -720,14 +728,19 @@ COMPOSANTS
 .cours section {
   display: flex;
 }
+.cours section p {
+  padding-top: 10px;
+  box-sizing: border-box;
+}
 .cours .cours__carte {
+  display: block;
   color: #d16b6b;
   box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   border-radius: 20px;
   background-color: #a5e099;
   margin: 0;
-  padding: 0;
+  padding-top: 50px;
   width: 70%;
   height: 100%;
   flex-wrap: wrap;
