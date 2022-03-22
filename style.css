@@ -600,6 +600,14 @@ COMPOSANTS
   display: flex;
   flex-direction: row;
 }
+.site__footer__ligne .footer__copyright {
+  font-family: "Bayon";
+  color: #d16b6b;
+}
+.site__footer__ligne .footer__auteur {
+  font-family: "Bayon";
+  color: #d16b6b;
+}
 .site__footer__ligne .footer__recherche {
   display: flex;
   flex-direction: column;
@@ -713,9 +721,16 @@ COMPOSANTS
   display: flex;
 }
 .cours .cours__carte {
+  color: #d16b6b;
+  box-shadow: #394044 1px -1px 10px;
+  border: 1px solid 1px;
+  border-radius: 20px;
   background-color: #a5e099;
   margin: 0;
   padding: 0;
+  width: 70%;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 /* -----------------------------------------------------------------
