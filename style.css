@@ -334,6 +334,8 @@ html {
 /* -----------------------------------------------------------------
 VARIABLES
 ------------------------------------------------------------------- */
+/*------------------FOOTER---------------*/
+/*-----------------RECHERCHE-------------*/
 /* points de rupture pour les media query */
 /*layout général*/
 /* -------------------LAYOUT---------- */
@@ -715,11 +717,27 @@ COMPOSANTS
   border: none;
 }
 
-.site__main_recherche {
+.site__main_recherche::before {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  background-color: #e6fa74;
+}
+
+article {
+  background-color: #e6fa74;
+  color: red;
+  text-decoration: none;
+  opacity: 0.6;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+  color: #eed33e;
 }
 
 .cours__titre {
@@ -742,7 +760,7 @@ COMPOSANTS
   margin: 0;
   padding-top: 50px;
   width: 70%;
-  height: 100%;
+  height: 80%;
   flex-wrap: wrap;
 }
 
