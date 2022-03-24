@@ -740,6 +740,10 @@ a {
   color: #eed33e;
 }
 
+a:hover {
+  color: #191970;
+}
+
 .cours__titre {
   color: #f00;
 }
