@@ -586,28 +586,24 @@ COMPOSANTS
   unicode-range: U+1780-17FF, U+200C, U+25CC;
 }
 .site__footer {
-  font-family: "Bayon";
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #263353;
   padding: 15px;
+  color: #d16b6b;
 }
 .site__footer__colonne {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 .site__footer__colonne section {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
   border: 1px solid #645672;
   flex: 0 0 35%;
+  color: #f0c6c6;
 }
-.site__footer__colonne section .footer__adresse {
-  display: flex;
-  flex-direction: column;
-  color: #aebadd;
-  box-shadow: #394044 1px -1px 10px;
-  border: 1px solid 1px;
-  width: 10%;
+.site__footer__colonne section .footer__article::before {
+  background-color: #701933;
 }
 .site__footer__ligne {
   display: flex;
@@ -622,11 +618,11 @@ COMPOSANTS
   display: flex;
   justify-content: space-evenly;
   padding-top: 30px;
-  font-family: "Bayon, sans-serif";
+  font-family: "Bayon", "sans-serif";
   color: #d16b6b;
 }
 .site__footer__ligne .footer__auteur {
-  font-family: "Bayon, sans-serif";
+  font-family: "Bayon", "sans-serif";
   color: #d16b6b;
 }
 .site__footer__ligne .footer__recherche {
