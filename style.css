@@ -617,13 +617,14 @@ COMPOSANTS
 .site__footer__ligne .footer__copyright {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 30px;
-  font-family: "Bayon", "sans-serif";
+  padding-top: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #d16b6b;
 }
 .site__footer__ligne .footer__auteur {
   font-family: "Bayon", "sans-serif";
   color: #d16b6b;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .site__footer__ligne .footer__recherche {
   display: flex;
