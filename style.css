@@ -419,6 +419,7 @@ COMPOSANTS
 
 #chk-burger:checked ~ #burger {
   transform: rotate(90deg);
+  margin-bottom: 140px;
 }
 
 #chk-burger:checked ~ .menu-principal-container {
@@ -427,6 +428,7 @@ COMPOSANTS
 
 .menu-principal-container {
   display: none;
+  padding: 30px 0 0 0;
 }
 
 .menu {
@@ -451,10 +453,6 @@ COMPOSANTS
 }
 
 @media screen and (min-width: 550px) {
-  .site #burger {
-    display: none;
-  }
-
   .site.menu-principal-container {
     display: block;
   }
@@ -594,6 +592,7 @@ COMPOSANTS
 }
 .site__footer__colonne {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 .site__footer__colonne section {
@@ -794,5 +793,11 @@ article {
   }
   to {
     opacity: 1;
+  }
+}
+@media screen and (min-width: 550px) {
+  .site.menu-principal-container {
+    animation-duration: 3s;
+    animation-name: reopacity;
   }
 }/*# sourceMappingURL=style.css.map */
