@@ -1,7 +1,14 @@
 <?php get_header() ?>
 <main class="principal">
-    <h1>category-cours.php</h1>
+    <h1>category.php</h1>
     <section class="formation">
+
+    
+    <?php wp_nav_menu(array(
+              "menu"=>"categorie_cours",
+                       "container"=>"nav")); ?>
+
+
         <h2 class="formation__titre">Liste des cours du programme TIM</h2>
         <div class="formation__liste">
             <?php if (have_posts()):

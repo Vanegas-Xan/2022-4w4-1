@@ -2,7 +2,7 @@
 /**
 Theme name: TP1-xander-vanegas
 Author: Xander Vanegas
-Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/Exer_2
+Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/TP1
 Description: Travail pratique dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -346,22 +346,22 @@ VARIABLES
     gap: 10px;
     grid-template-columns: 1350px auto " header header" "sidebar main" " footer footer";
   }
-
   .home {
     background-color: #285664;
     display: grid;
     gap: 10px;
     grid-template-columns: 1350px auto;
-    grid-template-areas: " header header" "sidebar main" " footer footer";
+    grid-template-areas: " header header" "sidebar main" " footer footer";
   }
 }
+
 .site {
   background-color: #285664;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   gap: 10px;
   height: 100vh;
   grid-template-columns: 1350px auto;
-  grid-template-areas: " header" "sidebar" " main" " footer";
+  grid-template-areas: " header" "sidebar"	 " main" " footer";
 }
 
 .home::after {
@@ -380,6 +380,7 @@ VARIABLES
   grid-area: header;
   background-color: #34d1bc;
 }
+
 .site__header__utile {
   grid-area: header;
   background-color: #34d1bc;
@@ -414,7 +415,7 @@ COMPOSANTS
 #burger {
   position: absolute;
   transform: rotate(0deg);
-  transition: transform 0.3s;
+  transition: transform .3s;
 }
 
 #chk-burger:checked ~ #burger {
@@ -441,6 +442,7 @@ COMPOSANTS
   margin: 0;
   padding: 0;
 }
+
 .menu-item a {
   display: block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -448,6 +450,7 @@ COMPOSANTS
   text-decoration: none;
   color: #eed33e;
 }
+
 .menu-item a:hover {
   color: #191970;
 }
@@ -456,15 +459,14 @@ COMPOSANTS
   .site.menu-principal-container {
     display: block;
   }
-
   .home #burger {
     display: none;
   }
-
   .home.menu-principal-container {
     display: block;
   }
 }
+
 .site__header__titre {
   display: flex;
   align-items: flex-start;
@@ -473,6 +475,7 @@ COMPOSANTS
   padding-left: 15px;
   padding-top: 100px;
 }
+
 @media screen and (min-width: 550px) {
   .site__header__titre {
     flex-direction: row;
@@ -480,30 +483,36 @@ COMPOSANTS
     align-items: center;
   }
 }
+
 .site__header__titre__titre h1 {
   margin: 0;
   padding-right: 15px;
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
+
 .site__header__titre__titre h2 {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: clamp(0.6rem, 4vw, 2rem);
 }
+
 .site__header__titre .custom-logo-link, .site__header__titre .header__principal, .site__header__titre .header-description {
   padding-left: 20px;
   text-decoration: none;
 }
+
 .site__header__titre__utile {
   display: flex;
   flex-direction: column;
 }
+
 @media screen and (min-width: 700px) {
   .site__header__titre__utile {
     margin-left: auto;
   }
 }
+
 .site__header__titre .icone {
   display: flex;
   flex-wrap: nowrap;
@@ -543,11 +552,13 @@ COMPOSANTS
   border-radius: 25px;
   transition: 300ms;
 }
+
 @media screen and (min-width: 550px) {
   .carte {
     width: 45%;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .carte {
     width: 30%;
@@ -557,9 +568,11 @@ COMPOSANTS
 .carte:hover {
   background-color: #a5e099;
 }
+
 .carte:hover__titre {
   background-color: #fafff9;
 }
+
 .carte:hover__contenu {
   background-color: #d1a489;
 }
@@ -578,23 +591,26 @@ COMPOSANTS
 }
 
 @font-face {
-  font-family: "Bayon";
+  font-family: 'Bayon';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/bayon/v27/9XUrlJNmn0LPFm-lMBc0dw.woff2) format("woff2");
   unicode-range: U+1780-17FF, U+200C, U+25CC;
 }
+
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #263353;
   padding: 15px;
   color: #d16b6b;
 }
+
 .site__footer__colonne {
   display: flex;
   justify-content: space-between;
 }
+
 .site__footer__colonne section {
   display: flex;
   flex-direction: row;
@@ -602,18 +618,22 @@ COMPOSANTS
   flex: 0 0 35%;
   color: #f0c6c6;
 }
+
 .site__footer__colonne section .footer__article::before {
   background-color: #701933;
 }
+
 .site__footer__ligne {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .site__footer__ligne section {
   display: flex;
   flex-direction: row;
 }
+
 .site__footer__ligne .footer__copyright {
   display: flex;
   justify-content: space-evenly;
@@ -621,26 +641,30 @@ COMPOSANTS
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #d16b6b;
 }
+
 .site__footer__ligne .footer__auteur {
   font-family: "Bayon", "sans-serif";
   color: #d16b6b;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
+
 .site__footer__ligne .footer__recherche {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .site__footer__ligne .footer__menu {
   align-items: flex-end;
 }
+
 .site__footer__ligne .footer__menu__nav__ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding-top: 30px;
   color: #f0c6c6;
-  font-family: "Bayon";
+  font-family: 'Bayon';
 }
 
 /*
@@ -650,13 +674,13 @@ COMPOSANTS
     flex-direction: row;
     justify-content: space-evenly;
     font-family: 'Poppins', sans-serif;
-
+   
     background-color: $color__background-footer;
     margin: 0;
     padding: 0;
     text-decoration: none;
-
-
+    
+  
 }
 
 .site__droit{
@@ -670,7 +694,7 @@ COMPOSANTS
     flex-direction: row;
     align-items: center;
     font-family: $font_header-h1;
-
+    
 }
 
 
@@ -680,30 +704,34 @@ COMPOSANTS
     color: rgb(240, 198, 198);
 }
 
+ 
 
-
-
+        
 */
 .recherche {
   display: flex;
   border: 1px solid #aaa;
   height: 30px;
 }
+
 .recherche__text {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 0.5s;
+  transition: background-color .5s;
   width: 100%;
 }
+
 .recherche__text:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 @media screen and (min-width: 700px) {
   .recherche__text {
     width: 300px;
   }
 }
+
 .recherche__submit {
   display: flex;
   align-items: center;
@@ -711,6 +739,7 @@ COMPOSANTS
   border: none;
   outline: none;
 }
+
 .recherche__submit svg {
   color: #000;
 }
@@ -754,13 +783,16 @@ a:hover {
 .cours__titre {
   color: #f00;
 }
+
 .cours section {
   display: flex;
 }
+
 .cours section p {
   padding-top: 10px;
   box-sizing: border-box;
 }
+
 .cours .cours__carte {
   display: block;
   color: #d16b6b;
@@ -773,6 +805,19 @@ a:hover {
   width: 70%;
   height: 80%;
   flex-wrap: wrap;
+}
+
+/*---------------------------------------------------------------------
+Navigation pour la page categorie.php  bouton de categorie
+----------------------------------------------------------------*/
+.menu-categorie_cours-container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  display: block;
+  margin: 0 15px;
 }
 
 /* -----------------------------------------------------------------
@@ -792,9 +837,11 @@ article {
     opacity: 1;
   }
 }
+
 @media screen and (min-width: 550px) {
   .site.menu-principal-container {
     animation-duration: 3s;
     animation-name: reopacity;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

@@ -22,7 +22,8 @@ add_action("wp_enqueue_scripts", "cidw_4w4_font");
 function cidw_4w4_enregistre_mon_menu() {
   register_nav_menu( 'principal', __( 'Menu_principal', 'cidw_4w4' ,
                        'Footer', __ ('Menu_Footer', 'cidw_4w4'),         
-                       'menu_lien_externe', __('Menu lien externe', 'cidw_4w4')
+                       'menu_lien_externe', __('Menu lien externe', 'cidw_4w4'),
+                       'menu_categorie_cours', __('Menu category', 'cidw_4w4')
                        ) );
 }
 
