@@ -120,4 +120,23 @@ function my_register_sidebars() {
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 add_action( 'widgets_init', 'my_register_sidebars' );
+
+
+/*------------------------------------------------------------
+function trouve_la_categorie($tableau){
+    foreach($tableau as $cle){
+        if(is_category($cle)) return($cle);
+    }
+}
+*/
+
+/*---------------------Ajout de la description -----------------*/
+function prefix_nav_description( $item_output, $item,  $args ) {
+  if ( !empty( $item->description ) ) {
+      $item_output = str_replace( $args->link_after . '</a>',
+      $args->link_after .'<hr><span class="menu-item-description">' . $item->description . '</span>' .  '</a>',
+            $item_output );
+  }
+}
+
 ?>

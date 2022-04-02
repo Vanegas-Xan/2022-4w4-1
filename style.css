@@ -540,10 +540,44 @@ COMPOSANTS
   display: block;
 }
 
+.formation__liste {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formation__liste .web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+}
+
+.formation__liste .jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.formation__liste .comm {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
+}
+
+.formation__liste .design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.formation__liste .utilitaire {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
+}
+
+.formation__liste .video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.formation__liste .creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
+}
+
 .carte {
+  background-repeat: no-repeat;
+  background-position: 93% 3%;
   display: flex;
   flex-direction: column;
-  color: #d16b6b;
   box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   width: 100%;
@@ -818,6 +852,22 @@ Navigation pour la page categorie.php  bouton de categorie
 .menu-categorie_cours-container .menu .menu-item {
   display: block;
   margin: 0 15px;
+}
+
+/* --------------------------------------------------------------
+Navigation pour la page category.php   boutons de catégorie  groupe-1
+----------------------------------------------------------------- */
+.menu-categorie_cours-container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  margin: 0 15px;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  text-decoration: none;
 }
 
 /* -----------------------------------------------------------------
