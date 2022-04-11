@@ -1,10 +1,10 @@
 <?php get_header() ?>
-<main class="principal">
-    <h1>category.php</h1>
+<main class="site__main">
+    <h1>------ category.php groupe-1-----------</h1>
     <section class="formation">
     <?php wp_nav_menu(array(
-              "menu"=>"categorie_cours",
-                       "container"=>"nav")); ?>
+              "menu"=>"menu_category",
+              "container"=>"nav")); ?>
 
 
         <h2 class="formation__titre">Liste des cours du programme TIM</h2>
@@ -19,9 +19,12 @@
         //retourne un string qui représente le slug de la catégorie
 */
         $url_categorie_slug = trouve_la_categorie(array('cours','web', 'design', 'jeu', 'utilitaires', 'creation-3d','video', 'animation'));
-        $ma_categorie = get_category_by_slug($url_categorie);
+        $ma_categorie = get_category_by_slug($url_categorie_slug);
         echo "<h3>" . $ma_categorie->description . "</h3>"; 
         ?>
+
+       <a href="?cletri=title&ordre=asc">Ascendant</a><br>
+       <a href="?cletri=title&ordre=desc">Descendant</a><br>
 
         <div class="formation__liste">
             <?php if (have_posts()):

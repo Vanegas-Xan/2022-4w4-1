@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /**
-Theme name: TP1-xander-vanegas
+Theme name: Ex3 Xander Vanegas 4e4
 Author: Xander Vanegas
-Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/TP1
-Description: Travail pratique dans le cadre du cours 4W4
+Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/lab5
+Description: Exercice 3 à remettre pour le 
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -336,6 +336,7 @@ VARIABLES
 ------------------------------------------------------------------- */
 /*------------------FOOTER---------------*/
 /*-----------------RECHERCHE-------------*/
+/*-----------------TITRE-------------*/
 /* points de rupture pour les media query */
 /*layout général*/
 /* -------------------LAYOUT---------- */
@@ -405,6 +406,18 @@ VARIABLES
 /* -----------------------------------------------------------------
 ELEMENTS
 ------------------------------------------------------------------- */
+.h1 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+.h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
 /* -----------------------------------------------------------------
 COMPOSANTS
 ------------------------------------------------------------------- */
@@ -540,12 +553,25 @@ COMPOSANTS
   display: block;
 }
 
+.formation {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formation__titre {
+  color: #d16b6b;
+  margin: 10px 0px;
+}
+
 .formation__liste {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
 }
 
-.formation__liste .web {
+.formation__liste .web::before {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
 }
 
@@ -553,7 +579,7 @@ COMPOSANTS
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
 }
 
-.formation__liste .comm {
+.formation__liste .animation {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
 }
 
@@ -561,7 +587,7 @@ COMPOSANTS
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
 }
 
-.formation__liste .utilitaire {
+.formation__liste .utilitaires {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
 }
 
@@ -578,6 +604,7 @@ COMPOSANTS
   background-position: 93% 3%;
   display: flex;
   flex-direction: column;
+  color: #d16b6b;
   box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   width: 100%;
@@ -839,19 +866,6 @@ a:hover {
   width: 70%;
   height: 80%;
   flex-wrap: wrap;
-}
-
-/*---------------------------------------------------------------------
-Navigation pour la page categorie.php  bouton de categorie
-----------------------------------------------------------------*/
-.menu-categorie_cours-container .menu {
-  display: flex;
-  list-style-type: none;
-}
-
-.menu-categorie_cours-container .menu .menu-item {
-  display: block;
-  margin: 0 15px;
 }
 
 /* --------------------------------------------------------------
