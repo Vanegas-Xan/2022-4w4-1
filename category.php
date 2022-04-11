@@ -23,6 +23,9 @@
         echo "<h3>" . $ma_categorie->description . "</h3>"; 
         ?>
 
+        <a href="<?= esc_url( home_url( '/' ));  ?>/category/<?= $url_categorie_slug ?>/?cletri=title&ordre=asc">Ascendant</a><br>
+        <a href="<?= esc_url( home_url( '/' ));  ?>/category/<?= $url_categorie_slug ?>/?cletri=title&ordre=desc">Descendant</a><br>
+
        <a href="?cletri=title&ordre=asc">Ascendant</a><br>
        <a href="?cletri=title&ordre=desc">Descendant</a><br>
 

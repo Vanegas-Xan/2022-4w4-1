@@ -46,20 +46,23 @@ return $mon_objet;
 
 add_filter("wp_nav_menu_objects", "cidw_4w4_filtre_le_menu");
 
-/* ----------------------------------------------------------- Ajout de la description dans menu */
-
-function prefix_nav_description( $item_output, $item) {
+/*---------------------Ajout de la description -----------------
+function prefix_nav_description( $item_output, $item,  $args ) {
   if ( !empty( $item->description ) ) {
-      $item_output = str_replace( '</a>',
-      '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
+      $item_output = str_replace( $args->link_after . '</a>',
+      $args->link_after .'<hr><span class="menu-item-description">' . $item->description . '</span>' .  '</a>',
             $item_output );
   }
-  return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
 
 
 
+
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );*/
+// l'argument 10 : niveau de privilège
+// l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
+
+/* -----------------------------------------------------------   add_theme_support() */
 function cidw_4w4_add_theme_support(){
 
   add_theme_support('post-thumbnails');
@@ -72,7 +75,7 @@ function cidw_4w4_add_theme_support(){
 add_action( 'after_setup_theme', 'cidw_4w4_enregistre_mon_menu' );
 
 
-
+/*---------------------------------------------------------- Enregistrement des sidebar */
 function my_register_sidebars() {
    /* Register the 'primary' sidebar. */
   register_sidebar(
@@ -143,18 +146,6 @@ function trouve_la_categorie($tableau){
         if(is_category($cle)) return($cle);
     }
 }
-
-
-/*---------------------Ajout de la description -----------------*/
-function prefix_nav_description( $item_output, $item,  $args ) {
-  if ( !empty( $item->description ) ) {
-      $item_output = str_replace( $args->link_after . '</a>',
-      $args->link_after .'<hr><span class="menu-item-description">' . $item->description . '</span>' .  '</a>',
-            $item_output );
-  }
-}
-
-
 /* ---------------------------------------------------------------------- */
 /**
  * @param : WP_Query $query
