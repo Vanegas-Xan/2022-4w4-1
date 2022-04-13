@@ -47,18 +47,21 @@ return $mon_objet;
 add_filter("wp_nav_menu_objects", "cidw_4w4_filtre_le_menu");
 
 /*---------------------Ajout de la description -----------------
-function prefix_nav_description( $item_output, $item,  $args ) {
+
+/* ----------------------------------------------------------- Ajout de la description dans menu */
+function prefix_nav_description( $item_output, $item) {
   if ( !empty( $item->description ) ) {
-      $item_output = str_replace( $args->link_after . '</a>',
-      $args->link_after .'<hr><span class="menu-item-description">' . $item->description . '</span>' .  '</a>',
+      $item_output = str_replace( '</a>',
+      '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
             $item_output );
   }
+  return $item_output;
 }
 
 
 
 
-add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );*/
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
 // l'argument 10 : niveau de privilège
 // l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
 
@@ -152,23 +155,27 @@ function trouve_la_categorie($tableau){
  */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
-   if (!is_admin() && is_main_query() && is_category(array("cours","web","jeu","creation-3d","utilitaires", "design","animation","video" )))  {
-        
+   if (!is_admin() 
+  || !$query -> is_main_query()
+  || !$query -> is_category(array("cours","web","jeu","creation-3d","utilitaires", "design","animation","video" )))  {
+      
+      {
+        return $query;
+      }
+      else
+     {  
     // var_dump($query);
     //    die();
     $ordre = get_query_var('ordre');
     $cle = get_query_var('cletri');
-//echo "----ordre =". $ordre ."----------------<br>";
-//echo "----cle =". $cle ."----------------<br>";
-
-
-    $query->set('posts_per_page', -1);
+    $query->set('posts_per_page', '-1');
     $query->set('orderby', $cle);
     $query->set('order', $ordre);
-
+//echo "----ordre =". $ordre ."----------------<br>";
+//echo "----cle =". $cle ."----------------<br>";
    }
  
-
+  }
 /*
 
   if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
