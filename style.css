@@ -871,16 +871,17 @@ a:hover {
 /* --------------------------------------------------------------
 Navigation pour la page category.php   boutons de catégorie  groupe-1
 ----------------------------------------------------------------- */
-.menu-categorie_cours-container .menu {
+.menu-category_cours-container .menu {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
 }
 
-.menu-categorie_cours-container .menu .menu-item {
+.menu-category_cours-container .menu .menu-item {
   margin: 0 15px;
 }
 
-.menu-categorie_cours-container .menu .menu-item a {
+.menu-category_cours-container .menu .menu-item a {
   text-decoration: none;
 }
 

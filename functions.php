@@ -24,7 +24,7 @@ function cidw_4w4_enregistre_mon_menu() {
                        'principal' => __( 'Menu_principal', 'cidw_4w4' ),
                        'Footer' => __ ('Menu_Footer', 'cidw_4w4'),         
                        'menu_lien_externe' => __('Menu lien externe', 'cidw_4w4'),
-                       'menu_categorie_cours' => __('Menu category', 'cidw_4w4'),
+                       'menu_categorie_cours' => __('Menu category cours', 'cidw_4w4'),
                        'menu_accueil' => __('Menu accueil', 'cidw_4w4'),
                        'menu_accueil_evenement' => __('Menu accueil evenement', 'cidw_4w4')
   ));
