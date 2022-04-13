@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,27 +342,27 @@ VARIABLES
 /* -------------------LAYOUT---------- */
 @media screen and (min-width: 550px) {
   .site {
-    background-color: #285664;
+    background-color: rgb(40, 86, 100);
     display: grid;
     gap: 10px;
     grid-template-columns: 1750px auto " header header" "sidebar main" " footer footer";
   }
+
   .home {
-    background-color: #285664;
+    background-color: rgb(40, 86, 100);
     display: grid;
     gap: 10px;
     grid-template-columns: 1750px auto;
-    grid-template-areas: " header header" "sidebar main" " footer footer";
+    grid-template-areas: " header header" "sidebar main" " footer footer";
   }
 }
-
 .site {
-  background-color: #285664;
+  background-color: rgb(40, 86, 100);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   gap: 10px;
   height: 100vh;
   grid-template-columns: 1750px auto;
-  grid-template-areas: " header" "sidebar"	 " main" " footer";
+  grid-template-areas: " header" "sidebar" " main" " footer";
 }
 
 .home::after {
@@ -379,28 +379,27 @@ VARIABLES
 
 .site__header__titre {
   grid-area: header;
-  background-color: #34d1bc;
+  background-color: rgb(52, 209, 188);
 }
-
 .site__header__utile {
   grid-area: header;
-  background-color: #34d1bc;
+  background-color: rgb(52, 209, 188);
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #612772;
+  background-color: rgb(97, 39, 114);
 }
 
 .site__main {
   grid-area: main;
-  background-color: #d16b6b;
+  background-color: rgb(209, 107, 107);
   padding: 10px 15px 10px 15px;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #382222;
+  background-color: rgb(56, 34, 34);
 }
 
 /* -----------------------------------------------------------------
@@ -428,7 +427,7 @@ COMPOSANTS
 #burger {
   position: absolute;
   transform: rotate(0deg);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 #chk-burger:checked ~ #burger {
@@ -455,7 +454,6 @@ COMPOSANTS
   margin: 0;
   padding: 0;
 }
-
 .menu-item a {
   display: block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -463,7 +461,6 @@ COMPOSANTS
   text-decoration: none;
   color: #eed33e;
 }
-
 .menu-item a:hover {
   color: #191970;
 }
@@ -472,14 +469,15 @@ COMPOSANTS
   .site.menu-principal-container {
     display: block;
   }
+
   .home #burger {
     display: none;
   }
+
   .home.menu-principal-container {
     display: block;
   }
 }
-
 .site__header__titre {
   display: flex;
   align-items: flex-start;
@@ -488,7 +486,6 @@ COMPOSANTS
   padding-left: 15px;
   padding-top: 100px;
 }
-
 @media screen and (min-width: 550px) {
   .site__header__titre {
     flex-direction: row;
@@ -496,36 +493,30 @@ COMPOSANTS
     align-items: center;
   }
 }
-
 .site__header__titre__titre h1 {
   margin: 0;
   padding-right: 15px;
   font-family: "Poppins", sans-serif;
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
-
 .site__header__titre__titre h2 {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: clamp(0.6rem, 4vw, 2rem);
 }
-
 .site__header__titre .custom-logo-link, .site__header__titre .header__principal, .site__header__titre .header-description {
   padding-left: 20px;
   text-decoration: none;
 }
-
 .site__header__titre__utile {
   display: flex;
   flex-direction: column;
 }
-
 @media screen and (min-width: 700px) {
   .site__header__titre__utile {
     margin-left: auto;
   }
 }
-
 .site__header__titre .icone {
   display: flex;
   flex-wrap: nowrap;
@@ -542,9 +533,9 @@ COMPOSANTS
 }
 
 .principal {
-  background-color: #d16b6b;
+  background-color: rgb(209, 107, 107);
   border-radius: 5px;
-  box-shadow: #39443e 1px -1px 10px;
+  box-shadow: rgb(57, 68, 62) 1px -1px 10px;
 }
 
 .main__titre {
@@ -558,43 +549,34 @@ COMPOSANTS
   display: flex;
   flex-direction: column;
 }
-
 .formation__titre {
-  color: #d16b6b;
+  color: rgb(209, 107, 107);
   margin: 10px 0px;
 }
-
 .formation__liste {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 15px;
 }
-
 .formation__liste .web::before {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
 }
-
 .formation__liste .jeu {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
 }
-
 .formation__liste .animation {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
 }
-
 .formation__liste .design {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
 }
-
 .formation__liste .utilitaires {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
 }
-
 .formation__liste .video {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
 }
-
 .formation__liste .creation-3d {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
 }
@@ -604,8 +586,8 @@ COMPOSANTS
   background-position: 93% 3%;
   display: flex;
   flex-direction: column;
-  color: #d16b6b;
-  box-shadow: #394044 1px -1px 10px;
+  color: rgb(209, 107, 107);
+  box-shadow: rgb(57, 64, 68) 1px -1px 10px;
   border: 1px solid 1px;
   width: 100%;
   padding: 10px;
@@ -613,13 +595,11 @@ COMPOSANTS
   border-radius: 25px;
   transition: 300ms;
 }
-
 @media screen and (min-width: 550px) {
   .carte {
     width: 45%;
   }
 }
-
 @media screen and (min-width: 1000px) {
   .carte {
     width: 30%;
@@ -627,15 +607,13 @@ COMPOSANTS
 }
 
 .carte:hover {
-  background-color: #a5e099;
+  background-color: rgb(165, 224, 153);
 }
-
 .carte:hover__titre {
-  background-color: #fafff9;
+  background-color: rgb(250, 255, 249);
 }
-
 .carte:hover__contenu {
-  background-color: #d1a489;
+  background-color: rgb(209, 164, 137);
 }
 
 .carte__titre {
@@ -652,80 +630,69 @@ COMPOSANTS
 }
 
 @font-face {
-  font-family: 'Bayon';
+  font-family: "Bayon";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/bayon/v27/9XUrlJNmn0LPFm-lMBc0dw.woff2) format("woff2");
   unicode-range: U+1780-17FF, U+200C, U+25CC;
 }
-
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: #263353;
+  background-color: rgb(38, 51, 83);
   padding: 15px;
-  color: #d16b6b;
+  color: rgb(209, 107, 107);
 }
-
 .site__footer__colonne {
   display: flex;
   justify-content: space-between;
 }
-
 .site__footer__colonne section {
   display: flex;
   flex-direction: row;
-  border: 1px solid #645672;
+  border: 1px solid rgb(100, 86, 114);
   flex: 0 0 35%;
-  color: #f0c6c6;
+  color: rgb(240, 198, 198);
 }
-
 .site__footer__colonne section .footer__article::before {
   background-color: #701933;
 }
-
 .site__footer__ligne {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .site__footer__ligne section {
   display: flex;
   flex-direction: row;
 }
-
 .site__footer__ligne .footer__copyright {
   display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: #d16b6b;
+  color: rgb(209, 107, 107);
 }
-
 .site__footer__ligne .footer__auteur {
   font-family: "Bayon", "sans-serif";
-  color: #d16b6b;
+  color: rgb(209, 107, 107);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-
 .site__footer__ligne .footer__recherche {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .site__footer__ligne .footer__menu {
   align-items: flex-end;
 }
-
 .site__footer__ligne .footer__menu__nav__ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding-top: 30px;
-  color: #f0c6c6;
-  font-family: 'Bayon';
+  color: rgb(240, 198, 198);
+  font-family: "Bayon";
 }
 
 /*
@@ -735,13 +702,13 @@ COMPOSANTS
     flex-direction: row;
     justify-content: space-evenly;
     font-family: 'Poppins', sans-serif;
-   
+
     background-color: $color__background-footer;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    
-  
+
+
 }
 
 .site__droit{
@@ -755,7 +722,7 @@ COMPOSANTS
     flex-direction: row;
     align-items: center;
     font-family: $font_header-h1;
-    
+
 }
 
 
@@ -765,34 +732,30 @@ COMPOSANTS
     color: rgb(240, 198, 198);
 }
 
- 
 
-        
+
+
 */
 .recherche {
   display: flex;
   border: 1px solid #aaa;
   height: 30px;
 }
-
 .recherche__text {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   width: 100%;
 }
-
 .recherche__text:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 @media screen and (min-width: 700px) {
   .recherche__text {
     width: 300px;
   }
 }
-
 .recherche__submit {
   display: flex;
   align-items: center;
@@ -800,7 +763,6 @@ COMPOSANTS
   border: none;
   outline: none;
 }
-
 .recherche__submit svg {
   color: #000;
 }
@@ -844,23 +806,20 @@ a:hover {
 .cours__titre {
   color: #f00;
 }
-
 .cours section {
   display: flex;
 }
-
 .cours section p {
   padding-top: 10px;
   box-sizing: border-box;
 }
-
 .cours .cours__carte {
   display: block;
-  color: #d16b6b;
-  box-shadow: #394044 1px -1px 10px;
+  color: rgb(209, 107, 107);
+  box-shadow: rgb(57, 64, 68) 1px -1px 10px;
   border: 1px solid 1px;
   border-radius: 20px;
-  background-color: #a5e099;
+  background-color: rgb(165, 224, 153);
   margin: 0;
   padding-top: 50px;
   width: 70%;
@@ -876,11 +835,9 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   list-style-type: none;
   justify-content: space-around;
 }
-
 .menu-category_cours-container .menu .menu-item {
   margin: 0 15px;
 }
-
 .menu-category_cours-container .menu .menu-item a {
   text-decoration: none;
 }
@@ -889,23 +846,18 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   display: flex;
   justify-content: space-around;
 }
-
 .menu-accueil-container .menu .accueil__cours .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
 }
-
 .menu-accueil-container .menu .accueil__prof .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
 }
-
 .menu-accueil-container .menu .accueil__aide .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
 }
-
 .menu-accueil-container .menu .accueil__etudiant .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
 }
-
 .menu-accueil-container .menu .menu-item {
   display: flex;
   flex-direction: column;
@@ -913,7 +865,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   height: 175px;
   border: 1px solid #aaa;
 }
-
 .menu-accueil-container .menu .menu-item a {
   display: flex;
   flex-direction: column;
@@ -922,12 +873,10 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   height: 100%;
   font-size: 2rem;
 }
-
 .menu-accueil-container .menu .menu-item a .menu-item-description {
   font-size: 1rem;
   text-align: center;
 }
-
 .menu-accueil-container .menu .menu-item a .menu-item-icone {
   width: 2rem;
   height: 2rem;
@@ -938,6 +887,15 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   background-size: cover;
 }
 
+/*.evenement{
+
+    &_endroit{}
+    &_resume{}
+    &_organisateur{}
+
+
+
+    */
 /* -----------------------------------------------------------------
 ANIMATIONS
 ------------------------------------------------------------------- */
@@ -955,11 +913,9 @@ article {
     opacity: 1;
   }
 }
-
 @media screen and (min-width: 550px) {
   .site.menu-principal-container {
     animation-duration: 3s;
     animation-name: reopacity;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
