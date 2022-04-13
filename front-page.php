@@ -1,9 +1,13 @@
 <?php get_header() ?>
-<main class="site_main">
+<main class="site__main">
   
     <h1>----------Front-page.php-----------</h1>
     <?php wp_nav_menu(array(
         "menu" => "menu_accueil",
+        "container" => "nav"  )); ?>
+
+<?php wp_nav_menu(array(
+        "menu" => "menu_accueil_evenement",
         "container" => "nav"  )); ?>
     <?php if (have_posts()): while(have_posts()):the_post() ?>
             

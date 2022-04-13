@@ -25,7 +25,8 @@ function cidw_4w4_enregistre_mon_menu() {
                        'Footer' => __ ('Menu_Footer', 'cidw_4w4'),         
                        'menu_lien_externe' => __('Menu lien externe', 'cidw_4w4'),
                        'menu_categorie_cours' => __('Menu category', 'cidw_4w4'),
-                       'menu_accueil' => __('Menu accueil', 'cidw_4w4')
+                       'menu_accueil' => __('Menu accueil', 'cidw_4w4'),
+                       'menu_accueil_evenement' => __('Menu accueil evenement', 'cidw_4w4')
   ));
 }
 
@@ -157,7 +158,7 @@ function cidw_4w4_pre_get_posts(WP_Query $query)
 {
    if (!is_admin() 
   || !$query -> is_main_query()
-  || !$query -> is_category(array("cours","web","jeu","creation-3d","utilitaires", "design","animation","video" )))  {
+  || !$query -> is_category(array("cours","web","jeu","creation-3d","utilitaires", "design","animation","video" )))  
       
       {
         return $query;
@@ -168,14 +169,15 @@ function cidw_4w4_pre_get_posts(WP_Query $query)
     //    die();
     $ordre = get_query_var('ordre');
     $cle = get_query_var('cletri');
-    $query->set('posts_per_page', '-1');
     $query->set('orderby', $cle);
     $query->set('order', $ordre);
+    $query->set('posts_per_page', '-1');
+    return $query;
 //echo "----ordre =". $ordre ."----------------<br>";
 //echo "----cle =". $cle ."----------------<br>";
    }
  
-  }
+   }
 /*
 
   if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
@@ -191,7 +193,7 @@ function cidw_4w4_pre_get_posts(WP_Query $query)
    }
 
   */ 
-}
+
 function cidw_4w4_query_vars($params){
 
 

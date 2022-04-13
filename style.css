@@ -345,13 +345,13 @@ VARIABLES
     background-color: #285664;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1350px auto " header header" "sidebar main" " footer footer";
+    grid-template-columns: 1750px auto " header header" "sidebar main" " footer footer";
   }
   .home {
     background-color: #285664;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1350px auto;
+    grid-template-columns: 1750px auto;
     grid-template-areas: " header header" "sidebar main" " footer footer";
   }
 }
@@ -361,7 +361,7 @@ VARIABLES
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   gap: 10px;
   height: 100vh;
-  grid-template-columns: 1350px auto;
+  grid-template-columns: 1750px auto;
   grid-template-areas: " header" "sidebar"	 " main" " footer";
 }
 
