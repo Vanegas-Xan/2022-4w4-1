@@ -900,6 +900,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
+  transition: 300ms;
 }
 
 .menu-accueil-container .menu .accueil__cours .menu-item-icone {
@@ -948,6 +949,10 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.menu-accueil-container .menu:hover {
+  background-color: #a5e099;
 }
 
 /*.evenement{
