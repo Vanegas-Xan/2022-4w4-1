@@ -12,7 +12,7 @@ add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
 
 function cidw_4w4_font() {
 
-  wp_enqueue_style('cidw_4w4_police_google','https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap','https://fonts.googleapis.com/css2?family=Bayon&display=swap', false);
+  wp_enqueue_style('cidw_4w4_police_google','https://fonts.googleapis.com/css2?family=Staatliches&display=swap', false);
 
 }
 add_action("wp_enqueue_scripts", "cidw_4w4_font");
@@ -77,6 +77,8 @@ function cidw_4w4_add_theme_support(){
   ));
 }
 add_action( 'after_setup_theme', 'cidw_4w4_enregistre_mon_menu' );
+add_action( 'after_setup_theme', 'cidw_4w4_add_theme_support' );
+
 
 
 /*---------------------------------------------------------- Enregistrement des sidebar */
@@ -167,8 +169,8 @@ function cidw_4w4_pre_get_posts(WP_Query $query)
      {  
     // var_dump($query);
     //    die();
-    $ordre = get_query_var('ordre');
-    $cle = get_query_var('cletri');
+    $ordre = get_query_var('ordre', 'asc');
+    $cle = get_query_var('cletri', 'title');
     $query->set('orderby', $cle);
     $query->set('order', $ordre);
     $query->set('posts_per_page', '-1');

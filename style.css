@@ -334,6 +334,9 @@ html {
 /* -----------------------------------------------------------------
 VARIABLES
 ------------------------------------------------------------------- */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /*------------------FOOTER---------------*/
 /*-----------------RECHERCHE-------------*/
 /*-----------------TITRE-------------*/
@@ -379,12 +382,12 @@ VARIABLES
 
 .site__header__titre {
   grid-area: header;
-  background-color: #34d1bc;
+  background: linear-gradient(to left, #00c9ff, #92fe9d);
 }
 
 .site__header__utile {
   grid-area: header;
-  background-color: #34d1bc;
+  background: linear-gradient(to left, #00c9ff, #92fe9d);
 }
 
 .site__barre {
@@ -400,7 +403,7 @@ VARIABLES
 
 .site__footer {
   grid-area: footer;
-  background-color: #382222;
+  background: linear-gradient(to top, #00467f, #a5cc82);
 }
 
 /* -----------------------------------------------------------------
@@ -505,14 +508,21 @@ COMPOSANTS
 }
 
 .site__header__titre__titre h2 {
+  padding-right: 2em;
   margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: clamp(0.6rem, 4vw, 2rem);
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+}
+
+.site__header__titre .custom-logo-link {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  font-size: clamp(0.8rem, 2vw, 8rem);
 }
 
 .site__header__titre .custom-logo-link, .site__header__titre .header__principal, .site__header__titre .header-description {
   padding-left: 20px;
   text-decoration: none;
+  font-size: 5em;
 }
 
 .site__header__titre__utile {
@@ -886,8 +896,10 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 }
 
 .menu-accueil-container .menu {
+  align-content: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
 }
 
 .menu-accueil-container .menu .accueil__cours .menu-item-icone {
