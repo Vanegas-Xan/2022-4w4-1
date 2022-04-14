@@ -895,6 +895,10 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   text-decoration: none;
 }
 
+.menu-accueil-container {
+  border-radius: 25px;
+}
+
 .menu-accueil-container .menu {
   align-content: center;
   display: flex;
@@ -906,21 +910,25 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 .menu-accueil-container .menu .accueil__cours .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .menu .accueil__prof .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .menu .accueil__aide .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .menu .accueil__etudiant .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .menu .menu-item {
@@ -929,6 +937,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   flex: 0 0 20%;
   height: 175px;
   border: 1px solid #aaa;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .menu .menu-item a {
@@ -949,6 +958,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   width: 2rem;
   height: 2rem;
   border: 1px solid #aaa;
+  border-radius: 25px;
   margin-top: auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -957,30 +967,42 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 
 .menu-accueil-container .accueil__cours :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
-  background-color: #db99e0;
+  background-position-x: 50%;
+  background-position-y: 90%;
+  background-color: rgba(169, 224, 153, 0.849);
   background-repeat: no-repeat;
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .accueil__prof :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
   background-color: #db99e0;
+  background-position-x: 50%;
+  background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .accueil__aide :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
-  background-color: #db99e0;
+  background-color: #99b3e0;
+  background-position-x: 50%;
+  background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 .menu-accueil-container .accueil__etudiant :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
-  background-color: #db99e0;
+  background-color: #e0ab99;
+  background-position-x: 50%;
+  background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
+  border-radius: 25px;
 }
 
 /*.evenement{
