@@ -36,6 +36,10 @@
 
 
      </footer>
+     <div class="boite__modale">
+     <p class="boite__modele__texte">
+     Ceci est un texte pour déterminer le fonctionnnement de boite modale</p>
+     <?php ?></div>
      <?php wp_footer(); ?>
     
 
