@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-Theme name: Ex4 Xander Vanegas 4w4
+Theme name: Ex3 Xander Vanegas 4e4
 Author: Xander Vanegas
-Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/exer4
+Author URL : https://github.com/Vanegas-Xan/2022-4w4-1/tree/exer3
 Description: Exercice 3 à remettre pour le 16 avril.
 Version: 1.0
 Requires PHP: 7.0
@@ -1005,15 +1005,14 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border-radius: 25px;
 }
 
-/*.evenement{
+.evenement_resume {
+  background-color: #bbb;
+}
 
-    &_endroit{}
-    &_resume{}
-    &_organisateur{}
+.evenement_organisateur {
+  background-color: #c9b8df;
+}
 
-
-    
-    */
 /* -----------------------------------------------------------------
 ANIMATIONS
 ------------------------------------------------------------------- */
