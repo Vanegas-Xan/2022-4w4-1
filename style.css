@@ -967,11 +967,11 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   background-color: rgb(255, 119, 119);
   transform: scale(0.1);
   transition: all 1s ease-in-out;
-  display: hide;
+  visibility: hidden;
 }
 .boite__modale--ouvrir {
   transform: scale(1);
-  display: inline;
+  visibility: visible;
 }
 
 /* -----------------------------------------------------------------
