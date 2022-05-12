@@ -12,16 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <?php wp_head(); ?>
-    <?php show_admin_bar(true); ?>
+    
+    <style>
+        .home::after{
+            background-color: <?= get_theme_mod('background_body');?>
+        }
+
+        .site{
+            background-color: <?= get_theme_mod('background_body');?>
+        }
+    </style>
 </head>
 
 <body <?php body_class("site"); ?> style="background-color:<?= get_theme_mod('background_body'); ?> ;"></style> >
 <header class="site__header__titre" >
+
 <?php the_custom_logo(); ?> 
     <h1 class="header__principal"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <?php bloginfo('name'); ?></h1>
 
     <h2 class="header__secondaire"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a><?php bloginfo('description'); ?></h2>
+<div class="clip__background"></div> 
 
 <section class="site__header__utile"  >
 
@@ -31,6 +42,8 @@
 </header>
 
 <section class="site__barre">
+<div class="clip__background"></div> 
+
     <input type="checkbox"  id="chk-burger">
     <label for="chk-burger" id="burger" class="burger">
         <!-- <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

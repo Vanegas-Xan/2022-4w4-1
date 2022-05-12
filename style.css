@@ -17,6 +17,8 @@ Text Domain: cidw-4w4
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -181,9 +183,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +193,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +204,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +250,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +259,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +268,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +276,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -345,31 +347,32 @@ VARIABLES
 /* -------------------LAYOUT---------- */
 @media screen and (min-width: 550px) {
   .site {
-    background-color: rgb(40, 86, 100);
+    background-color: #285664;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1600px auto " header header" "sidebar main" " footer footer";
+    grid-template-columns: 1900px auto " header header" "sidebar main" " footer footer";
   }
-
   .home {
-    background-color: rgb(40, 86, 100);
+    background-color: #285664;
     display: grid;
     gap: 10px;
-    grid-template-columns: 1600px auto;
-    grid-template-areas: " header header" "sidebar main" " footer footer";
+    grid-template-columns: 1900px auto;
+    grid-template-areas: " header header" "sidebar main" " footer footer";
   }
 }
+
 .site {
-  background-color: rgb(40, 86, 100);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #285664;
+  font-family: "Permanent Marker", "cursive";
   gap: 10px;
   height: 100vh;
-  grid-template-columns: 1600px auto;
-  grid-template-areas: " header" "sidebar" " main" " footer";
+  grid-template-columns: 1900px auto;
+  grid-template-areas: " header" "sidebar"	 " main" " footer";
 }
 
 .home::after {
   position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
   top: 0;
@@ -383,20 +386,30 @@ VARIABLES
 .site__header__titre {
   grid-area: header;
   background: linear-gradient(to left, #00c9ff, #92fe9d);
+  animation-duration: deg;
+  transition: all 5s;
 }
+
 .site__header__utile {
   grid-area: header;
   background: linear-gradient(to left, #00c9ff, #92fe9d);
 }
 
+@keyframes deg {
+  0% {
+  }
+  100% {
+  }
+}
+
 .site__barre {
   grid-area: sidebar;
-  background-color: rgb(97, 39, 114);
+  background-color: #612772;
 }
 
 .site__main {
   grid-area: main;
-  background-color: rgb(209, 107, 107);
+  background-color: #d16b6b;
   padding: 10px 15px 10px 15px;
 }
 
@@ -413,7 +426,7 @@ ELEMENTS
 }
 
 .h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .h3 {
@@ -429,7 +442,7 @@ COMPOSANTS
 
 #burger {
   position: absolute;
-  transition: transform 0.3s;
+  transition: transform .3s;
 }
 
 #chk-burger:checked ~ #burger {
@@ -451,10 +464,23 @@ COMPOSANTS
   padding: 0;
 }
 
+@keyframes animmenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  20% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
 .menu-item {
   margin: 0;
   padding: 0;
 }
+
 .menu-item a {
   display: block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -462,6 +488,7 @@ COMPOSANTS
   text-decoration: none;
   color: #eed33e;
 }
+
 .menu-item a:hover {
   color: #191970;
 }
@@ -470,15 +497,14 @@ COMPOSANTS
   .site.menu-principal-container {
     display: block;
   }
-
   .home #burger {
     display: none;
   }
-
   .home.menu-principal-container {
     display: block;
   }
 }
+
 .site__header__titre {
   display: flex;
   align-items: flex-start;
@@ -487,6 +513,7 @@ COMPOSANTS
   padding-left: 15px;
   padding-top: 100px;
 }
+
 @media screen and (min-width: 550px) {
   .site__header__titre {
     flex-direction: row;
@@ -494,36 +521,62 @@ COMPOSANTS
     align-items: center;
   }
 }
+
 .site__header__titre__titre h1 {
   margin: 0;
   padding-right: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Bebas Neue", "cursive";
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
+
+.site__header__titre__titre :hover {
+  background-color: #f46c6c;
+  border-radius: 45%;
+}
+
 .site__header__titre__titre h2 {
   padding-right: 2em;
   margin: 0;
-  font-family: "Staatliches", cursive;
+  font-family: "Permanent Marker", "cursive";
   font-size: 2em;
 }
+
 .site__header__titre .custom-logo-link {
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   font-size: clamp(0.8rem, 2vw, 8rem);
 }
+
 .site__header__titre .custom-logo-link, .site__header__titre .header__principal, .site__header__titre .header-description {
   padding-left: 20px;
   text-decoration: none;
   font-size: 5em;
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
 }
+
 .site__header__titre__utile {
   display: flex;
   flex-direction: column;
+  background-color: aqua;
 }
+
 @media screen and (min-width: 700px) {
   .site__header__titre__utile {
     margin-left: auto;
   }
 }
+
+.site__header__titre .clip__background {
+  background-color: #dc1d08;
+  box-sizing: border-box;
+  box-shadow: 0.4rem 0.4rem #bd5050;
+  position: absolute;
+  width: 15em;
+  height: 20.7em;
+  top: 0;
+  left: 30em;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
 .site__header__titre .icone {
   display: flex;
   flex-wrap: nowrap;
@@ -536,13 +589,13 @@ COMPOSANTS
   background-color: cadetblue;
   justify-content: space-evenly;
   row-gap: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Bebas Neue", "cursive";
 }
 
 .principal {
-  background-color: rgb(209, 107, 107);
+  background-color: #d16b6b;
   border-radius: 5px;
-  box-shadow: rgb(57, 68, 62) 1px -1px 10px;
+  box-shadow: #39443e 1px -1px 10px;
 }
 
 .main__titre {
@@ -560,34 +613,43 @@ COMPOSANTS
   display: flex;
   flex-direction: column;
 }
+
 .formation__titre {
-  color: rgb(209, 107, 107);
+  color: #d16b6b;
   margin: 10px 0px;
 }
+
 .formation__liste {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 15px;
 }
+
 .formation__liste .web::before {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
 }
+
 .formation__liste .jeu {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
 }
+
 .formation__liste .animation {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
 }
+
 .formation__liste .design {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
 }
+
 .formation__liste .utilitaires {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
 }
+
 .formation__liste .video {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
 }
+
 .formation__liste .creation-3d {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
 }
@@ -597,8 +659,8 @@ COMPOSANTS
   background-position: 93% 3%;
   display: flex;
   flex-direction: column;
-  color: rgb(209, 107, 107);
-  box-shadow: rgb(57, 64, 68) 1px -1px 10px;
+  color: #d16b6b;
+  box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   width: 100%;
   padding: 10px;
@@ -606,11 +668,13 @@ COMPOSANTS
   border-radius: 25px;
   transition: 300ms;
 }
+
 @media screen and (min-width: 550px) {
   .carte {
     width: 45%;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .carte {
     width: 30%;
@@ -618,13 +682,15 @@ COMPOSANTS
 }
 
 .carte:hover {
-  background-color: rgb(165, 224, 153);
+  background-color: #a5e099;
 }
+
 .carte:hover__titre {
-  background-color: rgb(250, 255, 249);
+  background-color: #fafff9;
 }
+
 .carte:hover__contenu {
-  background-color: rgb(209, 164, 137);
+  background-color: #d1a489;
 }
 
 .carte__titre {
@@ -636,74 +702,85 @@ COMPOSANTS
 .carte__contenu {
   font-size: 0.8rem;
   color: DimGrey;
-  font-family: "Poppins", sans-serif;
+  font-family: "Bebas Neue", "cursive";
   transition: 300ms;
 }
 
 @font-face {
-  font-family: "Bayon";
+  font-family: 'Bayon';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/bayon/v27/9XUrlJNmn0LPFm-lMBc0dw.woff2) format("woff2");
   unicode-range: U+1780-17FF, U+200C, U+25CC;
 }
+
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  background-color: rgb(38, 51, 83);
+  background-color: #263353;
   padding: 15px;
-  color: rgb(209, 107, 107);
+  color: #d16b6b;
 }
+
 .site__footer__colonne {
   display: flex;
   justify-content: space-between;
 }
+
 .site__footer__colonne section {
   display: flex;
   flex-direction: row;
-  border: 1px solid rgb(100, 86, 114);
+  border: 1px solid #645672;
   flex: 0 0 35%;
-  color: rgb(240, 198, 198);
+  color: #f0c6c6;
 }
+
 .site__footer__colonne section .footer__article::before {
   background-color: #701933;
 }
+
 .site__footer__ligne {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .site__footer__ligne section {
   display: flex;
   flex-direction: row;
 }
+
 .site__footer__ligne .footer__copyright {
   display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  color: rgb(209, 107, 107);
+  color: #d16b6b;
 }
+
 .site__footer__ligne .footer__auteur {
   font-family: "Bayon", "sans-serif";
-  color: rgb(209, 107, 107);
+  color: #d16b6b;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
+
 .site__footer__ligne .footer__recherche {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .site__footer__ligne .footer__menu {
   align-items: flex-end;
 }
+
 .site__footer__ligne .footer__menu__nav__ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding-top: 30px;
-  color: rgb(240, 198, 198);
-  font-family: "Bayon";
+  color: #f0c6c6;
+  font-family: 'Bayon';
 }
 
 /*
@@ -713,13 +790,13 @@ COMPOSANTS
     flex-direction: row;
     justify-content: space-evenly;
     font-family: 'Poppins', sans-serif;
-
+   
     background-color: $color__background-footer;
     margin: 0;
     padding: 0;
     text-decoration: none;
-
-
+    
+  
 }
 
 .site__droit{
@@ -733,7 +810,7 @@ COMPOSANTS
     flex-direction: row;
     align-items: center;
     font-family: $font_header-h1;
-
+    
 }
 
 
@@ -743,30 +820,34 @@ COMPOSANTS
     color: rgb(240, 198, 198);
 }
 
+ 
 
-
-
+        
 */
 .recherche {
   display: flex;
   border: 1px solid #aaa;
   height: 30px;
 }
+
 .recherche__text {
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 0.5s;
+  transition: background-color .5s;
   width: 100%;
 }
+
 .recherche__text:focus {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 @media screen and (min-width: 700px) {
   .recherche__text {
     width: 300px;
   }
 }
+
 .recherche__submit {
   display: flex;
   align-items: center;
@@ -774,6 +855,7 @@ COMPOSANTS
   border: none;
   outline: none;
 }
+
 .recherche__submit svg {
   color: #000;
 }
@@ -817,20 +899,23 @@ a:hover {
 .cours__titre {
   color: #f00;
 }
+
 .cours section {
   display: flex;
 }
+
 .cours section p {
   padding-top: 10px;
   box-sizing: border-box;
 }
+
 .cours .cours__carte {
   display: block;
-  color: rgb(209, 107, 107);
-  box-shadow: rgb(57, 64, 68) 1px -1px 10px;
+  color: #d16b6b;
+  box-shadow: #394044 1px -1px 10px;
   border: 1px solid 1px;
   border-radius: 20px;
-  background-color: rgb(165, 224, 153);
+  background-color: #a5e099;
   margin: 0;
   padding-top: 50px;
   width: 70%;
@@ -846,44 +931,70 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   list-style-type: none;
   justify-content: space-around;
 }
+
 .menu-category_cours-container .menu .menu-item {
   margin: 0 15px;
 }
+
 .menu-category_cours-container .menu .menu-item a {
   text-decoration: none;
 }
 
-.menu-accueil-container {
+.menu-accueil-container, .menu-accueil_evenement-container {
   border-radius: 25px;
 }
-.menu-accueil-container .menu {
+
+.menu-accueil-container .menu, .menu-accueil_evenement-container .menu {
   align-content: center;
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
   transition: 300ms;
 }
-.menu-accueil-container .menu .accueil__cours .menu-item-icone {
+
+.menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__cours .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
   justify-content: space-around;
   border-radius: 25px;
 }
-.menu-accueil-container .menu .accueil__prof .menu-item-icone {
+
+.menu-accueil-container .menu .accueil__prof .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__prof .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
   justify-content: space-around;
   border-radius: 25px;
 }
-.menu-accueil-container .menu .accueil__aide .menu-item-icone {
+
+.menu-accueil-container .menu .accueil__aide .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__aide .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
   justify-content: space-around;
   border-radius: 25px;
 }
-.menu-accueil-container .menu .accueil__etudiant .menu-item-icone {
+
+.menu-accueil-container .menu .journee_etudiant .menu-item-icone, .menu-accueil_evenement-container .menu .journee_etudiant .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
   justify-content: space-around;
   border-radius: 25px;
 }
-.menu-accueil-container .menu .menu-item {
+
+.menu-accueil-container .menu .porte__ouverte .menu-item-icone, .menu-accueil_evenement-container .menu .porte__ouverte .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+  justify-content: space-around;
+  border-radius: 25px;
+}
+
+.menu-accueil-container .menu .porte__ouverte__ii .menu-item-icone, .menu-accueil_evenement-container .menu .porte__ouverte__ii .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+  justify-content: space-around;
+  border-radius: 25px;
+}
+
+.menu-accueil-container .menu .projet__etudiant .menu-item-icone, .menu-accueil_evenement-container .menu .projet__etudiant .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
+  justify-content: space-around;
+  border-radius: 25px;
+}
+
+.menu-accueil-container .menu .menu-item, .menu-accueil_evenement-container .menu .menu-item {
   display: flex;
   flex-direction: column;
   flex: 0 0 20%;
@@ -891,7 +1002,8 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border: 1px solid #aaa;
   border-radius: 25px;
 }
-.menu-accueil-container .menu .menu-item a {
+
+.menu-accueil-container .menu .menu-item a, .menu-accueil_evenement-container .menu .menu-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -899,62 +1011,72 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   height: 100%;
   font-size: 2rem;
 }
-.menu-accueil-container .menu .menu-item a .menu-item-description {
+
+.menu-accueil-container .menu .menu-item a .menu-item-description, .menu-accueil_evenement-container .menu .menu-item a .menu-item-description {
   font-size: 1rem;
   text-align: center;
 }
-.menu-accueil-container .menu .menu-item a .menu-item-icone {
+
+.menu-accueil-container .menu .menu-item a .menu-item-icone, .menu-accueil_evenement-container .menu .menu-item a .menu-item-icone {
   width: 2rem;
   height: 2rem;
-  border: 1px solid #aaa;
   border-radius: 25px;
   margin-top: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.menu-accueil-container .accueil__cours :hover {
+
+.menu-accueil-container .accueil__cours :hover, .menu-accueil_evenement-container .accueil__cours :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
   background-position-x: 50%;
   background-position-y: 90%;
+  transform: translateY(0) scale(1.2);
   background-color: rgba(169, 224, 153, 0.849);
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
 }
-.menu-accueil-container .accueil__prof :hover {
+
+.menu-accueil-container .accueil__prof :hover, .menu-accueil_evenement-container .accueil__prof :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
-  background-color: rgb(219, 153, 224);
+  background-color: #db99e0;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
+  transform: translateY(0) scale(1.2);
 }
-.menu-accueil-container .accueil__aide :hover {
+
+.menu-accueil-container .accueil__aide :hover, .menu-accueil_evenement-container .accueil__aide :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
-  background-color: rgb(153, 179, 224);
+  background-color: #99b3e0;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
+  transform: translateY(0) scale(1.2);
 }
-.menu-accueil-container .accueil__etudiant :hover {
+
+.menu-accueil-container .accueil__etudiant :hover, .menu-accueil_evenement-container .accueil__etudiant :hover {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
-  background-color: rgb(224, 171, 153);
+  background-color: #e0ab99;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
+  transform: translateY(0) scale(1.2);
 }
 
 .evenement_resume {
   background-color: #bbb;
 }
+
 .evenement_organisateur {
-  background-color: rgb(201, 184, 223);
+  background-color: #c9b8df;
 }
 
 .boite__modale {
@@ -964,14 +1086,80 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   top: 25%;
   left: 25%;
   border: 1px solid #bbb;
-  background-color: rgb(255, 119, 119);
+  background-color: #ff7777;
   transform: scale(0.1);
   transition: all 1s ease-in-out;
   visibility: hidden;
+  /*.boite__carrousel {
+  width : 75%;
+  height : 75%;
+  top:12.5%;
+  left:12.5%;
+
+  &__navigation{
+      position : absolute;
+      display : flex;
+      justify-content: center;
+      bottom: 0;
+      width : 100%;
+      border:2px solid red;
+      z-index: 1;
+
+      button{
+          width: 20px;
+          height: 20px;
+          margin : 5px 10px;
+          border-radius: 100%;
+          &:focus{
+              background-color: #000;
+          }
+      }
+  }
+
+  
+  &__img {
+      position : absolute;
+      top:0;
+      bottom: 0;
+      object-fit: cover;
+      width : 100%;
+      height: 100%;
+  }*/
 }
+
 .boite__modale--ouvrir {
+  animation-name: "anim-modale";
   transform: scale(1);
   visibility: visible;
+}
+
+.boite__modale--ouvrir .site__main ::before {
+  background-color: #454444;
+  opacity: 0.6;
+}
+
+.boite__modale .modale__fond {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.galerie {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .galerie {
+    width: 75%;
+  }
+}
+
+.home .site__main {
+  align-items: center;
 }
 
 /* -----------------------------------------------------------------
@@ -981,6 +1169,7 @@ article {
   transition: 300ms;
   animation-duration: 3s;
   animation-name: reopacity;
+  padding: 1em;
 }
 
 @keyframes reopacity {
@@ -991,58 +1180,69 @@ article {
     opacity: 1;
   }
 }
+
 @media screen and (min-width: 550px) {
   .site.menu-principal-container {
     animation-duration: 3s;
     animation-name: reopacity;
   }
 }
+
 .burger {
-  background-color: cornsilk;
   position: relative;
-  width: 5rem;
-  height: 5rem;
-  /** 
-      &:hover{
-          .burger__ligne:nth-of-type(1){
-              clip-path:polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
-           }
-           .burger__ligne:nth-of-type(2){
-              clip-path:polygon(40% 40%, 40% 40%, 60% 60%, 60% 60%);
-              opacity :0;
-           }
-           .burger__ligne:nth-of-type(3){
-              clip-path:polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
-           }
-          }
-  }
-  */
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  overflow: hidden;
+  /*
+    &:hover{
+        .burger__ligne:nth-of-type(1){
+            clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
+        }
+        .burger__ligne:nth-of-type(2){
+            clip-path: polygon(40% 40%, 40% 40%, 60% 60%, 60% 60%);
+            opacity: 0;
+        }
+        .burger__ligne:nth-of-type(3){
+            clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%,  107.1% 7.1%, 7.1% 107.1%);
+        }
+    }
+    */
 }
+
 .burger__ligne {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: brown;
-  transition: all 1s ease-in-out;
+  background-color: black;
+  transition: all .25s ease-in-out;
 }
+
 .burger__ligne:nth-of-type(1) {
   clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
 }
+
 .burger__ligne:nth-of-type(2) {
-  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0% 60%);
+  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
 }
+
 .burger__ligne:nth-of-type(3) {
-  clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 80%, 100% 80%, 100% 100%, 0 100%);
 }
-.burger .burger__X .burger__ligne:nth-of-type(1) {
+
+.burger__X .burger__ligne:nth-of-type(1) {
   clip-path: polygon(7.1% -7.1%, 107.1% 92.9%, 92.9% 107.1%, -7.1% 7.1%);
 }
-.burger .burger__X .burger__ligne:nth-of-type(2) {
+
+.burger__X .burger__ligne:nth-of-type(2) {
   clip-path: polygon(40% 40%, 40% 40%, 60% 60%, 60% 60%);
   opacity: 0;
 }
-.burger .burger__X .burger__ligne:nth-of-type(3) {
+
+.burger__X .burger__ligne:nth-of-type(3) {
   clip-path: polygon(-7.1% 92.9%, 92.9% -7.1%, 107.1% 7.1%, 7.1% 107.1%);
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

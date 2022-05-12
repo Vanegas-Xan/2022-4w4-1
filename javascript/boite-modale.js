@@ -16,6 +16,7 @@
         boite__modale.classList.add('boite__modale--ouvrir')
         console.log(this.parentNode.parentNode.children[0].innerHTML)
         boite__modale__texte.innerHTML = this.parentNode.parentNode.children[0].innerHTML
+      
       })
   }
 
