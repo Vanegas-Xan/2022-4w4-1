@@ -1102,6 +1102,10 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   visibility: visible;
 }
 
+.boite__modale--ouvrire, .boite__carrousel--ouvrire {
+  transform: scale(1);
+}
+
 .boite__modale__ferme, .boite__carrousel__ferme {
   position: absolute;
   width: 20px;
