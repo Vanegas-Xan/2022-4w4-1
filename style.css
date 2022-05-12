@@ -949,6 +949,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
+  font-family: "Permanent Marker", "cursive";
   transition: 300ms;
 }
 
