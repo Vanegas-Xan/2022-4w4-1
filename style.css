@@ -949,7 +949,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 15px;
-  font-family: "Permanent Marker", "cursive";
   transition: 300ms;
 }
 
@@ -1011,6 +1010,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   text-decoration: none;
   height: 100%;
   font-size: 2rem;
+  font-family: "Bebas Neue", "cursive";
 }
 
 .menu-accueil-container .menu .menu-item a .menu-item-description, .menu-accueil_evenement-container .menu .menu-item a .menu-item-description {
