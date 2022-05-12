@@ -10,7 +10,7 @@
         "menu" => "accueil_evenement",
         "container" => "nav"  )); ?>
 
-
+    <h1 class="galerie"> Galerie Gutenberg</h1>
 
     <?php if (have_posts()): while(have_posts()):the_post() ?>
             
