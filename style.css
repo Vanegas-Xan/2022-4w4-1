@@ -950,6 +950,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   justify-content: space-evenly;
   padding-bottom: 15px;
   transition: 300ms;
+  padding: 19px;
 }
 
 .menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__cours .menu-item-icone {
@@ -970,7 +971,13 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border-radius: 25px;
 }
 
-.menu-accueil-container .menu .journee_etudiant .menu-item-icone, .menu-accueil_evenement-container .menu .journee_etudiant .menu-item-icone {
+.menu-accueil-container .menu .accueil__etudiant .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__etudiant .menu-item-icone {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=calendar-bold");
+  justify-content: space-around;
+  border-radius: 25px;
+}
+
+.menu-accueil-container .menu .journee__etudiant .menu-item-icone, .menu-accueil_evenement-container .menu .journee__etudiant .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
   justify-content: space-around;
   border-radius: 25px;
@@ -1000,6 +1007,7 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   flex: 0 0 20%;
   height: 175px;
   border: 1px solid #aaa;
+  padding: 19px;
   border-radius: 25px;
 }
 
@@ -1029,10 +1037,8 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 }
 
 .menu-accueil-container .accueil__cours :hover, .menu-accueil_evenement-container .accueil__cours :hover {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
-  background-position-x: 50%;
-  background-position-y: 90%;
-  transform: translateY(0) scale(1.2);
+  background-position-x: 80%;
+  background-position-y: 100%;
   background-color: rgba(169, 224, 153, 0.849);
   background-repeat: no-repeat;
   justify-content: space-around;
@@ -1040,36 +1046,30 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 }
 
 .menu-accueil-container .accueil__prof :hover, .menu-accueil_evenement-container .accueil__prof :hover {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=octoface");
   background-color: #db99e0;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
-  transform: translateY(0) scale(1.2);
 }
 
 .menu-accueil-container .accueil__aide :hover, .menu-accueil_evenement-container .accueil__aide :hover {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=bug-bold");
   background-color: #99b3e0;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
-  transform: translateY(0) scale(1.2);
 }
 
 .menu-accueil-container .accueil__etudiant :hover, .menu-accueil_evenement-container .accueil__etudiant :hover {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=mortar-board-bold");
   background-color: #e0ab99;
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
-  transform: translateY(0) scale(1.2);
 }
 
 .evenement_resume {
@@ -1080,10 +1080,11 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   background-color: #c9b8df;
 }
 
-.boite__modale {
+.boite__modale, .boite__carrousel {
   position: fixed;
   width: 50%;
-  height: 50%;
+  height: 55%;
+  line-height: 2em;
   top: 25%;
   left: 25%;
   border: 1px solid #bbb;
@@ -1091,55 +1092,30 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   transform: scale(0.1);
   transition: all 1s ease-in-out;
   visibility: hidden;
-  /*.boite__carrousel {
-  width : 75%;
-  height : 75%;
-  top:12.5%;
-  left:12.5%;
-
-  &__navigation{
-      position : absolute;
-      display : flex;
-      justify-content: center;
-      bottom: 0;
-      width : 100%;
-      border:2px solid red;
-      z-index: 1;
-
-      button{
-          width: 20px;
-          height: 20px;
-          margin : 5px 10px;
-          border-radius: 100%;
-          &:focus{
-              background-color: #000;
-          }
-      }
-  }
-
-  
-  &__img {
-      position : absolute;
-      top:0;
-      bottom: 0;
-      object-fit: cover;
-      width : 100%;
-      height: 100%;
-  }*/
+  padding: 14px;
+  box-sizing: content-box;
 }
 
-.boite__modale--ouvrir {
+.boite__modale--ouvrir, .boite__carrousel--ouvrir {
   animation-name: "anim-modale";
   transform: scale(1);
   visibility: visible;
 }
 
-.boite__modale--ouvrir .site__main ::before {
-  background-color: #454444;
-  opacity: 0.6;
+.boite__modale__ferme, .boite__carrousel__ferme {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 }
 
-.boite__modale .modale__fond {
+.boite__modale .closed, .boite__carrousel .closed {
+  display: none;
+}
+
+.boite__modale--fond:after, .boite__carrousel--fond:after {
   position: fixed;
   top: 0;
   left: 0;
@@ -1147,6 +1123,43 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   height: 100%;
   z-index: 50;
   background: rgba(0, 0, 0, 0.6);
+}
+
+.boite__modale .boite__carrousel, .boite__carrousel .boite__carrousel {
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
+}
+
+.boite__modale .boite__carrousel__navigation, .boite__carrousel .boite__carrousel__navigation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  border: 2px solid red;
+  z-index: 1;
+}
+
+.boite__modale .boite__carrousel__navigation button, .boite__carrousel .boite__carrousel__navigation button {
+  width: 20px;
+  height: 20px;
+  margin: 5px 10px;
+  border-radius: 100%;
+}
+
+.boite__modale .boite__carrousel__navigation button:focus, .boite__carrousel .boite__carrousel__navigation button:focus {
+  background-color: #000;
+}
+
+.boite__modale .boite__carrousel__img, .boite__carrousel .boite__carrousel__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .galerie {

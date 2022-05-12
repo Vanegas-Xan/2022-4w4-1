@@ -35,14 +35,20 @@
  </div>
 
 
-     </footer>
+     </footer>  
+     
+     <div class="modale__fond"></div>
      <div class="boite__modale">
      <button class="boite__modale__ferme">X</button>
      <p class="boite__modale__texte">
      Ceci est un texte pour déterminer le fonctionnnement de boite modale</p>
      </div>
 
-     <div class="modale__fond"></div>
+   
+     <div class="boite__carrousel">
+    <button class="boite__carrousel__ferme">X</button>
+    <section class="boite__carrousel__navigation"></section>
+</div>
      <?php wp_footer(); ?>
     
 

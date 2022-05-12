@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <main class="site__main">
 <section class="formation" >
 <h2 class="main__titre">Liste des cours</h2>
