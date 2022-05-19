@@ -741,6 +741,14 @@ COMPOSANTS
   color: rgb(240, 198, 198);
   list-style: none;
 }
+@media screen and (min-width: 550px) {
+  .site__footer__ligne .footer__menu__nav__ul {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
 .site__footer .footer__colonne {
   display: flex;
 }
