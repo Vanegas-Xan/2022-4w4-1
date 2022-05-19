@@ -920,9 +920,12 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   padding: 32px;
   background-color: rgb(220, 100, 93);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 550px) {
   .menu-accueil-container .menu, .menu-accueil_evenement-container .menu {
-    width: 30%;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
 }
 .menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__cours .menu-item-icone {
