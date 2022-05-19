@@ -450,7 +450,7 @@ COMPOSANTS
   display: none;
   padding: 30px 0 0 0;
 }
-.menu-principal-container ul {
+.menu-principal-container a {
   padding-left: 10px;
   border-left: 2px solid #3ca0e7;
   transition: all 0.3s ease;
@@ -743,6 +743,7 @@ COMPOSANTS
   padding-top: 30px;
   color: rgb(240, 198, 198);
   font-family: "Bayon";
+  list-style: none;
 }
 .site__footer .footer__colonne {
   display: flex;
