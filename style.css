@@ -921,11 +921,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   padding: 32px;
   background-color: rgb(220, 100, 93);
 }
-@media screen and (min-width: 550px) {
-  .menu-accueil-container .menu, .menu-accueil_evenement-container .menu {
-    width: 45%;
-  }
-}
 @media screen and (min-width: 1000px) {
   .menu-accueil-container .menu, .menu-accueil_evenement-container .menu {
     width: 30%;
@@ -1005,13 +1000,11 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 .menu-accueil-container .accueil__cours :hover, .menu-accueil_evenement-container .accueil__cours :hover {
   background-position-x: 80%;
   background-position-y: 100%;
-  background-color: rgba(169, 224, 153, 0.849);
   background-repeat: no-repeat;
   justify-content: space-around;
   border-radius: 25px;
 }
 .menu-accueil-container .accueil__prof :hover, .menu-accueil_evenement-container .accueil__prof :hover {
-  background-color: rgb(219, 153, 224);
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
@@ -1019,7 +1012,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border-radius: 25px;
 }
 .menu-accueil-container .accueil__aide :hover, .menu-accueil_evenement-container .accueil__aide :hover {
-  background-color: rgb(153, 179, 224);
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
@@ -1027,7 +1019,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border-radius: 25px;
 }
 .menu-accueil-container .accueil__etudiant :hover, .menu-accueil_evenement-container .accueil__etudiant :hover {
-  background-color: rgb(224, 171, 153);
   background-position-x: 50%;
   background-position-y: 90%;
   background-repeat: no-repeat;
