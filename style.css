@@ -741,18 +741,18 @@ COMPOSANTS
   color: rgb(240, 198, 198);
   list-style: none;
 }
+.site__footer .footer__colonne {
+  display: flex;
+}
+
 @media screen and (min-width: 550px) {
-  .site__footer__ligne .footer__menu__nav__ul {
+  .footer__menu__nav__ul {
     width: 45%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
   }
 }
-.site__footer .footer__colonne {
-  display: flex;
-}
-
 /*
 
 .site__footer{
@@ -928,14 +928,6 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   padding: 32px;
   background-color: rgb(220, 100, 93);
 }
-@media screen and (min-width: 550px) {
-  .menu-accueil-container .menu, .menu-accueil_evenement-container .menu {
-    width: 45%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-  }
-}
 .menu-accueil-container .menu .accueil__cours .menu-item-icone, .menu-accueil_evenement-container .menu .accueil__cours .menu-item-icone {
   background-image: url("https://s2.svgbox.net/octicons.svg?ic=file-badge-bold");
   justify-content: space-around;
@@ -1036,6 +1028,14 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
   border-radius: 25px;
 }
 
+@media screen and (min-width: 550px) {
+  .menu-accueil-container, .menu-accueil_evenement-container {
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
 .evenement_resume {
   background-color: #bbb;
 }
