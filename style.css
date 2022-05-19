@@ -837,12 +837,28 @@ COMPOSANTS
 }
 
 article {
-  background-color: #e6fa74;
-  color: red;
-  text-decoration: none;
-  border-radius: 30px;
-  flex-wrap: wrap;
-  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-position: 93% 3%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(209, 107, 107);
+  box-shadow: rgb(57, 64, 68) 1px -1px 10px;
+  border: 1px solid 1px;
+  width: 100%;
+  padding: 10px;
+  background-color: GhostWhite;
+  border-radius: 25px;
+  transition: 300ms;
+}
+@media screen and (min-width: 550px) {
+  article {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  article {
+    width: 30%;
+  }
 }
 
 a {
@@ -1017,8 +1033,8 @@ Navigation pour la page category.php   boutons de catégorie  groupe-1
 
 .boite__modale, .boite__carrousel {
   position: fixed;
-  width: 50%;
-  height: 55%;
+  width: 70%;
+  height: 65%;
   line-height: 2em;
   top: 25%;
   left: 25%;
