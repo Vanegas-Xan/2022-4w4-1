@@ -408,7 +408,6 @@ VARIABLES
 
 .site__footer {
   grid-area: footer;
-  background: linear-gradient(to top, #00467f, #a5cc82);
 }
 
 /* -----------------------------------------------------------------
